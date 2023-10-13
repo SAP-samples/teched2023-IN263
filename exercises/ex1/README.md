@@ -1,44 +1,59 @@
-# Exercise 1 - Exercise 1 Description
+## Build and Deploy the Extension Application
 
-In this exercise, we will create...
+In this section, you will clone the codebase and deploy the extension application in SAP BTP. 
 
-## Exercise 1.1 Sub Exercise 1 Description
+### 1. Clone the GitHub Repository
+    
 
-After completing these steps you will have created...
+Access the [Event To Action Framework](https://github.com/SAP-samples/btp-events-to-business-actions-framework) GitHub repository to download the project.
 
-1. Click here.
-<br>![](/exercises/ex1/images/01_01_0010.png)
+### 2. Check the Prerequisites for Deployment
 
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello World! | ). 
-```
+Ensure you have added the required entitlements as described in section **Step1-Set-Up** page before deployment.
 
+### 3. Deploy the Extension Application
 
+Build and deploy the application. Run the following commands:
 
-## Exercise 1.2 Sub Exercise 2 Description
+**Note**: Ensure you have Cloud MBT Build Tool. Refer [The Cloud MTA Build Tool (MBT)](https://help.sap.com/docs/HANA_CLOUD_DATABASE/c2b99f19e9264c4d9ae9221b22f6f589/1412120094534a23b1a894bc498c2767.html) for more details.
 
-After completing these steps you will have...
+1. Open the Cloud Foundry command line interface (cf CLI).
 
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
+    ```
+    git checkout advanced-event-mesh
+    ```
 
-```
+2. Navigate to **action-management** directory.
 
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
+    ```
+    cd action-management
+    ```
+3. Fetch the dependencies.
 
+    ```
+    npm install
+    ```
+4. Build action-management modules.
 
-## Summary
+    ```
+    npm run build
+    ```
+5. Log in to your subaccount in SAP BTP to deploy the extension application.
+    Check your region and copy the API endpoint accordingly. For example, "https://api.cf.region.hana.ondemand.com"
 
-You've now ...
+    ```
+    cf login -a `<CF API endpoint>`
+    ```
+6. Push the application to your subaccount.
 
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
+    ```
+    npm run deploy
+    ```
+7. You can also check the status of your applications in the SAP BTP cockpit. Copy the value of the extension application URL.
+
+    ![plot](./images/SAPBTPCockpit.png)
+
+8. In the SAP BTP cockpit, navigate to your subaccount and choose **Services** > **Instances and Subscriptions**. Check if you have all of the instances created post deployment as shown below. Make sure the status of all of the instances are **Created**.
+
+    ![plot](./images/postdeploy.png)
 
