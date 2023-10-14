@@ -8,14 +8,14 @@ In this event-driven scenario, based on the real-time status of the IoT Devices 
 
 ![plot](./images/businessprocess.png)
 
-a.  Data from industrial IoT Devices are sent to Microsoft Azure IoT Central.   
-b.  Rules in Microsoft Azure IoT identifies any event which needs attention and forwards it to SAP Integration Suite Advanced Event Mesh.   
-c.  SAP Integration Suite, Advanced Event Mesh receives the events and triggers webhook to send the events to extension application of Events-to-Business-Actions framework running on SAP BTP.    
-d.  Extension application of Events-To-Business-Actions framework is configured with all necessary actions to be taken.   
-    -   (Default Action) Calling SAP Build Process Automation - Decision capability API to determine which business action to be taken   
-    -   (Main Action) execute the business action OData API call to trigger business process in ERP systems   
-    -   (Pre Action) call api to get master data required for business action api (Main Action)   
-    -   (Post Action) After business action is executed, call Azure IoT device api to update it's status.   
+- Data from industrial IoT Devices are sent to Microsoft Azure IoT Central.   
+- Rules in Microsoft Azure IoT identifies any event which needs attention and forwards it to SAP Integration Suite Advanced Event Mesh.   
+- SAP Integration Suite, Advanced Event Mesh receives the events and triggers webhook to send the events to extension application of Events-to-Business-Actions framework running on SAP BTP.    
+- Extension application of Events-To-Business-Actions framework is configured with all necessary actions to be taken.   
+    - (Default Action) Calling SAP Build Process Automation - Decision capability API to determine which business action to be taken   
+    - (Main Action) execute the business action OData API call to trigger business process in ERP systems   
+    - (Pre Action) call api to get master data required for business action api (Main Action)   
+    - (Post Action) After business action is executed, call Azure IoT device api to update it's status.   
    Extension application executes the business actions and any pre or post actions.
 
 > In this hand-on session, Based on the fill level of waste container/silo a new Purchase Order Requisition is created in SAP S/4HANA.
@@ -27,11 +27,19 @@ d.  Extension application of Events-To-Business-Actions framework is configured 
 
 ## Pre-Configured Set Up 
 
->-  #### For this Hands-On scenario, we have already set up the SAP BTP Subaccount and added the Entitlements and Services required to execute this scenario. 
->-  #### In addition, we have set up the SAP Integration Suite, Advanced Event Mesh and configured an Event Broker Service. However, as part of this hands-on, participants will set up Queue, Rest Client and Consumers etc in Advanced Event Mesh. 
->-  #### To configure IoT devices, We have also set up a Microsft Azure IoT Central. Waste container device, rule to identify events and destination will be configured by participants as part of this hands-on.
->-  ####  We have configured the API_PURCHASEREQ_PROCESS_SRV API in our SAP S/4HANA System to create Purchase Requisitions triggered by events from Azure IoT Central. The service is activated, and a corresponding destination has been established within our SAP BTP subaccount.
->      
+>-  ### For this Hands-On scenario, we have already set up the SAP BTP Subaccount and added the Entitlements and Services required to execute this scenario. 
+>-  ### In addition, we have set up the SAP Integration Suite, Advanced Event Mesh and configured an Event Broker Service. However, as part of this hands-on, participants will set up Queue, Rest Client and Consumers etc in Advanced Event Mesh. 
+>-  ### To configure IoT devices, We have also set up a Microsft Azure IoT Central. Waste container device, rule to identify events and destination will be configured by participants as part of this hands-on.
+>-  ###  We have configured the API_PURCHASEREQ_PROCESS_SRV API in our SAP S/4HANA System to create Purchase Requisitions triggered by events from Azure IoT Central. The service is activated, and a corresponding destination has been established within our SAP BTP subaccount.
 
-      
+
+## **Systems annd Credentials**
+<details>
+
+| Systems | Credentials |
+|---------|-------------|
+| **[SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22)** | **Email:** IN263-XXX@education.cloud.sap <br> **Password:** Acce$$teched23 <br> _replace XXX with the number on your laptop_ |
+| **[]()**|
+
+</details>
 
