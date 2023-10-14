@@ -3,7 +3,8 @@
 >**In this tutorial, you will configure Microsoft Azure IoT Central Application. If you don't have access to a Microsoft Azure account (including a paid or trial subscription), check out the [Unit 3: Microsoft Azure basics and setup](https://open.sap.com/courses/btpma1/items/1f82kP2dhVdZ6e9xia10A8) chapter in the latest openSAP course [Building Applications on SAP BTP with Microsoft Services](https://open.sap.com/courses/btpma1/). It explains in detail how to create a new Microsoft Azure account and get a free trial subscription.**   
 
 <br>
-Once you have access to Microsoft Azure account, you will be able to see the list of Azure services in [Microsoft Azure Portal Home Page](http://portal.azure.com).
+
+Once you have access to Microsoft Azure account, you will be able to see the list of Azure services in [Microsoft Azure Portal Home Page](http://portal.azure.com) .
 <br>
 <img src="./images/homepage.png" width="75%" height="75%" /> 
 <!-- ![plot](./images/homepage.png)  -->
