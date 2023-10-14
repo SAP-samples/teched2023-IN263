@@ -1,72 +1,12 @@
-## Configure Microsoft Azure IoT Central
+### Role of Microsoft Azure IoT Central    
+>
+>**Azure IoT Central is a fully managed Internet of Things (IoT) platform provided by Microsoft. It simplifies the process of creating, deploying, and managing IoT solutions. Designed for businesses and organizations, IoT Central allows users to connect, monitor, and control their IoT devices securely and at scale.**     
+>
+>You can find more information about Microsft Azure IoT Central [here](https://azure.microsoft.com/en-in/products/iot-central).
 
-In this tutorial, you will configure Microsoft Azure IoT Central Application. These are the Microsoft Azure services and components you will need for this scenario:
-
-    - Valid Azure Subscription
-    - Azure IoT Central
-    - Azure Event Grid
-    - Azure Function App
-    - Azure Communication Service
-
-If you don't have access to a Microsoft Azure account (including a paid or trial subscription), check out the [Unit 3: Microsoft Azure basics and setup](https://open.sap.com/courses/btpma1/items/1f82kP2dhVdZ6e9xia10A8) chapter in the latest openSAP course [Building Applications on SAP BTP with Microsoft Services](https://open.sap.com/courses/btpma1/). 
-
-It explains in detail how to create a new Microsoft Azure account and get a free trial subscription. 
-
-Once you have access to Microsoft Azure account, you will be able to see the list of Azure services in [Microsoft Azure Portal Home Page](http://portal.azure.com).
-
-![plot](./images/homepage.png) 
-
-In this section, you will create an Microsoft Azure IoT Central application and configure data export from the devices based on certain rules. Here you will use the GUI-based method to create the application.
-
-### 1. Create Azure Resource Group
-
-1. In the Azure portal, navigate to the **Home** page and choose **Resource groups**.
-
-    ![plot](./images/resourcegrp.png)
-
-2. In the **Basics** tab, in the **Project details** section, in the **Resource group** field, enter **SAPBusinessActions**.
-
-    ![plot](./images/resourcegrpcreate.png)
-
-### 2. Create Azure IoT Central application
-
-1. In your Microsoft Azure Portal Home page, choose the created Resource Group.
-
-2. Choose **Create**. 
-
-    ![plot](./images/iot-central-app-create.png)
-
-3. From the **Marketplace** search for **IoT Central application**.
-
-    ![plot](./images/iot-central-app-create1.png)
-
-4. Select the **IoT Central application** tile and then choose **Create**.
-
-    ![plot](./images/iot-central-app-create2.png)
-
-5. In the **IoT Central application** template page,   
-
-    - In the **Subscription** dropdown menu, select **Free Trial** in case of free trial subscription or select your subscription.
-    
-    - In the **Resource group**  dropdown menu, select the resource group created in Step 1.
-
-    - In the **Resource name** field, enter  **wastemgmt-iotapp**. This is a unique name you can choose.
-
-    - In the **Application URL** field, enter **wastemgmt-iotapp**.
-
-    - In the **Template** dropdown menu, select **Connected Waste Management**. In this scenario, you are using the template from list of industry-relevant template to get started quickly.
-
-    - In the **Region** dropdown menu, select your preferred location where you would like to create your application.
-
-    - In the **Pricing plan** dropdown menu, select your preferred plan.
-
-6. Choose **Review + create**.
-
-    ![plot](./images/iot-central-app-create3.png)
-
- 7. If you see a message **Validation Passed**, choose **Create**.
-
-    ![plot](./images/iot-central-app-create4.png)
+### Setting up Microsoft Azure IoT Central    
+- We have already set up a Microsoft Azure IoT Central application. You can login into it the application using the credentials provided here: [Systems annd Credentials](../ex0/README.md/#systems-annd-credentials)
+- If you want to know the steps to setup or try it in your own Microsoft Azure subscription, you can follow the steps mentioned on this page: [Set Up Microsoft Azure IoT Central](./SetUp_Azure_IoT.md)
 
 ### 3. Create a new device template in IoT Central application
 
