@@ -5,7 +5,7 @@
 >You can find more information about Microsft Azure IoT Central [here](https://azure.microsoft.com/en-in/products/iot-central).
 
 ### Setting up Microsoft Azure IoT Central    
-- We have already set up a Microsoft Azure IoT Central application. You can login into it the application using the credentials provided here: [Systems annd Credentials](../ex0/README.md/#systems-annd-credentials)
+- We've established a Microsoft Azure IoT Central application, and you can access it by logging in using the provided credentials here: [Systems annd Credentials](../ex0/README.md/#systems-annd-credentials)
 - If you're interested in setting it up or trying it out within your own Microsoft Azure subscription, you can refer to the instructions provided on this page for detailed steps: [Set Up Microsoft Azure IoT Central](./SetUp_Azure_IoT.md)
 
 ### 3. Create a new device template in IoT Central application
