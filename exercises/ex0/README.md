@@ -1,38 +1,37 @@
-## Set Up 
+# Discover - Support Industry 4.0 with Event-Driven Architecture 
 
-### 1. Create or Use an Already Existing Subaccount in SAP BTP
+> **IMPORTANT**: This section is for informational purposes only and does not require any actions to be taken by the participants. Its aim is to provide a better understanding of the preconfigurations. The goal is to provide a clear understanding of the concepts and technologies involved.
 
-For this Hands-On scenario, we have already set up the SAP BTP Subaccount and added the Entitlements and Services required to execute this scenario. 
+## Business Process Flow
 
-You can access your Subaccount here ,[SAPBTP-Subaccount](<link-to-btp-subaccount>)
+In this event-driven scenario, based on the real-time status of the IoT Devices , actionable events are sent to Events-to-Business-Actions framework built on SAP BTP via SAP Integration Suite Advanced Event Mesh to decide on the critical business actions to be taken in the SAP Enteprise Business systems such as SAP S/4 HANA Cloud.
+
+![plot](./images/businessprocess.png)
+
+a.  Data from industrial IoT Devices are sent to Microsoft Azure IoT Central.   
+b.  Rules in Microsoft Azure IoT identifies any event which needs attention and forwards it to SAP Integration Suite Advanced Event Mesh.   
+c.  SAP Integration Suite, Advanced Event Mesh receives the events and triggers webhook to send the events to extension application of Events-to-Business-Actions framework running on SAP BTP.    
+d.  Extension application of Events-To-Business-Actions framework is configured with all necessary actions to be taken.   
+    -   (Default Action) Calling SAP Build Process Automation - Decision capability API to determine which business action to be taken   
+    -   (Main Action) execute the business action OData API call to trigger business process in ERP systems   
+    -   (Pre Action) call api to get master data required for business action api (Main Action)   
+    -   (Post Action) After business action is executed, call Azure IoT device api to update it's status.   
+   Extension application executes the business actions and any pre or post actions.
+
+> In this hand-on session, Based on the fill level of waste container/silo a new Purchase Order Requisition is created in SAP S/4HANA.
+>   -   Simulate a Waste Container device in Azure IoT Central which constantly generates events.
+>   -   Set up a rule which identifies when waste container is close to filled and forwards the event to SAP IAdvanced Event Mesh uisng detinations in Azure I0T Central.
+>   -   Advanced Event Mesh triggers the webhook to forward the event to Events-to-Business-Actions framework.
+>   -   Events-to-Business-Actions-Framework will first identify that a Purchase Requisition needs to be created in SAP S/4 HANA using Decision from SAP Build Process Automation and then creates a Purchase Requisition in SAP S/4 HANA system. Once purchase requisitionn is created, it also update the Waste Container device status on Azure IoT Central.
 
 
-### 2. Set Up SAP Integration Suite, Advanced Event Mesh
+## Pre-Configured Set Up 
 
-Access your **SAP Integration Suite, Advanced Event Mesh Application** here , [AEM-Application](<aem-link>)
+>-  #### For this Hands-On scenario, we have already set up the SAP BTP Subaccount and added the Entitlements and Services required to execute this scenario. 
+>-  #### In addition, we have set up the SAP Integration Suite, Advanced Event Mesh and configured an Event Broker Service. However, as part of this hands-on, participants will set up Queue, Rest Client and Consumers etc in Advanced Event Mesh. 
+>-  #### To configure IoT devices, We have also set up a Microsft Azure IoT Central. Waste container device, rule to identify events and destination will be configured by participants as part of this hands-on.
+>-  ####  We have configured the API_PURCHASEREQ_PROCESS_SRV API in our SAP S/4HANA System to create Purchase Requisitions triggered by events from Azure IoT Central. The service is activated, and a corresponding destination has been established within our SAP BTP subaccount.
+>      
 
+      
 
-### 3. Configure Microsoft Azure IoT Central
-
-For the Scope of this Hands-On, we have already set up the Microsoft Azure IoT Central for you. 
-
-Access the **Microsoft Azure IoT Central** through this link : <azure-iot-central-link>
-
-### 4. SAP S/4 HANA Readiness
-
-We will be using **API_PURCHASEREQ_PROCESS_SRV** API to create a Purchase Requisition in SAP S/4HANA System upon receiving a event from Azure IoT Central.
-We have already activated this service in the S/4HANA System.
-
-Connect to the S/4HANA System through via [S/4-HANA-System](<link>)
-
-Login Credentials 
-    ```
-    UserName:
-    Password:
-    ```
-
-### 5 Connect SAP BTP and SAP S/4HANA System
-
-This connection is already established between SAP BTP and SAP S/4HANA System
-
-To understand the Steps followed for Set-Up in detail read [Additional-Resources](../Additional-Resources/README.md)
