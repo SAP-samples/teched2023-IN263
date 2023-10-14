@@ -19,8 +19,8 @@ In this event-driven scenario, based on the real-time status of the IoT Devices 
 ## Exercises
 
 - [Getting Started](exercises/ex0/)
-- [Exercise 1 - Build and Deploy Events-to-Business-Actions Framework](exercises/ex1/)
-- [Exercise 2 - Configure Advanced Event Mesh](exercises/ex2/)
+- [Exercise 1 - Build and Deploy Events-to-Business-Actions Framework on SAP BTP](exercises/ex1/)
+- [Exercise 2 - Configure SAP Integration Suite, Advanced Event Mesh](exercises/ex2/)
 - [Exercise 3 - Configure Decision in Build Process Automation: Part 01](exercises/ex3/)
 - [Exercise 4 - Configure Business Actions in Events-to-Business-Actions Framework](exercises/ex4/)
 - [Exercise 5 - Configure Decision in Build Process Automation: Part 02](exercises/ex5/)

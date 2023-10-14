@@ -20,7 +20,7 @@ In this event-driven scenario, based on the real-time status of the IoT Devices 
 
 > In this hand-on session, Based on the fill level of waste container/silo a new Purchase Order Requisition is created in SAP S/4HANA.
 >   -   Simulate a Waste Container device in Azure IoT Central which constantly generates events.
->   -   Set up a rule which identifies when waste container is close to filled and forwards the event to SAP IAdvanced Event Mesh uisng detinations in Azure I0T Central.
+>   -   Set up a rule which identifies when waste container is close to filled and forwards the event to SAP IAdvanced Event Mesh uisng detinations in Azure IoT Central.
 >   -   Advanced Event Mesh triggers the webhook to forward the event to Events-to-Business-Actions framework.
 >   -   Events-to-Business-Actions-Framework will first identify that a Purchase Requisition needs to be created in SAP S/4 HANA using Decision from SAP Build Process Automation and then creates a Purchase Requisition in SAP S/4 HANA system. Once purchase requisitionn is created, it also update the Waste Container device status on Azure IoT Central.
 
@@ -39,7 +39,13 @@ In this event-driven scenario, based on the real-time status of the IoT Devices 
 | Systems | Credentials |
 |---------|-------------|
 | **[SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22)** | **Email:** IN263-XXX@education.cloud.sap <br> **Password:** Acce$$teched23 <br> _replace XXX with the number on your laptop_ |
-| **[]()**|
-
+| **[SAP Business Application Studio](https://in263-ol7jr9xc.eu10cf.applicationstudio.cloud.sap/index.html)**| **Email:** IN263-XXX@education.cloud.sap <br> **Password:** Acce$$teched23 <br> _replace XXX with the number on your laptop_ |
+| **[SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/)** | **Email:** IN263-XXX@education.cloud.sap <br> **Password:** Acce$$teched23 <br> _replace XXX with the number on your laptop_ |
+| **[Microsoft Azure IoT Central](https://industry-40.azureiotcentral.com/)** | **Email:** IN263-XXX@teched2023outlook.onmicrosoft.com <br> **Password:** Acce$$teched23 <br> _replace XXX with the number on your laptop_ |
 </details>
 
+### Summary
+
+The goal of this introduction was to give a clear understanding of the concepts and techniques involved in today's hands-on scenario.
+
+Continue to - [Exercise 1 - Build and Deploy Events-to-Business-Actions Framework on SAP BTP](../ex1/README.md)
