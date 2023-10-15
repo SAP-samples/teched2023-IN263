@@ -141,4 +141,4 @@ During this step, you'll initially establish a Destination, outlining the connec
 
 Congratulations on completing your Exercise 6! You have successfully created Device Template, Device and Data export with destination to send event to SAP Inetrgation Suite, Advanced Event Mesh. 
 
-Let's Continue to - [Exercise 7 - Test end to end Scenario](../ex7/README.md)
+Let's Continue to - [Exercise 7 - Execute the End-to-End Scenario](../ex7/README.md)
