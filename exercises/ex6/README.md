@@ -71,55 +71,74 @@ In this exeercis, your objective is to generate a Device Template and a simulate
 
 ### 4. Create a new Device of template "Waste Container v2"
 
-11. Choose **Devices** and then choose **+ New** to create a new device. 
+1. Choose **Devices** and then choose **+ New** to create a new device. 
 
     <img src="./images/newdevice00.jpg" width="75%" height="75%" />
     <!-- ![plot](./images/newdevice.png) -->
 
-12. In the **Device Template** dropdown menu, choose the device template you created and then choose **Create**.
+2. In the **Device Template** dropdown menu, choose the device template you created and then choose **Create**.
 
     <img src="./images/newdevice01.jpg" width="75%" height="75%" />
     <img src="./images/newdevice02.jpg" width="75%" height="75%" />
+    <img src="./images/newdevice03.jpg" width="75%" height="75%" />
     <!-- ![plot](./images/newdevice1.png) -->
 
 
+### 5. Configure Data Export
+
+During this step, you'll initially establish a Destination, outlining the connection specifics for the Advanced Event Mesh. Afterward, you'll configure a Data Export to transmit event information when the device's Fill Level drops below 30.
+
+1. Choose **Data export**, navigate to **Destinations** and then choose **New destination**
+
+    <img src="./images/data-export00.jpg" width="75%" height="75%" />
+
+2. Enter following values:
+    - **Name: DEST-AEM-IN263-XXX** where XXX is the id from your email id.
+    - **Destination type: Webhook**
+    - **Callback URL: https://{Username}:{Password}@{Secured Rest HOST}/{Topic Subscription}** where Username, Password, Secured Rest HOST, Topic Subscription are noted in exercise 2.     
+    <img src="./images/data-export01.jpg" width="75%" height="75%" />     
+    Then choose **Save**.
+
+3. Choose **Data export** and then choose **+ New Data Export** to create new Data export.
+
+    <img src="./images/data-export02.jpg" width="75%" height="75%" />
+
+4. Enter **EXPORT-IN263-XXX** as value where XXX is your id from email. 
+   - Disable the Data export by switiching of the status 
+   - In the **Type of data to export** dropdown menu, select **Telemetry** and then choose **+Filter**. 
+
+    <img src="./images/data-export03.jpg" width="75%" height="75%" />
+
+5. In the **Export the data if** dropdown menu, select **all of the conditions are true**. Add following filters as shown in following image:
+    - Device Template = Waste Container v2
+    - Filling Level LT 30
+    - Waste Container / Status = Working    
+    <img src="./images/data-export04.jpg" width="75%" height="75%" />
+
+    <!-- ![plot](./images/dataexport-new.png) -->
+
+6.  In the **Enrichments** section, choose **+Custom String** and enter the below key value pairs as shown below.
+    - Application: Industry-40
+    - DeviceName: Azure     
+    <img src="./images/data-export05.jpg" width="75%" height="75%" />
+
+7. In the **Enrichments** section, choose **+Property** and enter the below key value pairs as shown below.
+    - ContainerID: Waste Container v2 / Container ID
+    - System: Device name
+    - DeviceTemplate: Device template name
+    - Location: Waste Container v2 / Location Id     
+    <img src="./images/data-export06.jpg" width="75%" height="75%" />
+
+8. In the **Destinations** section, choose **+Destination** 
+
+    <img src="./images/data-export07.jpg" width="75%" height="75%" />       
+
+    Then select the detination created earlier in step 2 of part 5 and choose **Save**. 
+    <img src="./images/data-export08.jpg" width="75%" height="75%" />    
 
 
-### 4. Configure Data Export
+### 6. Congratulations!
 
-1. Choose **Data export** and then choose **+ New Data Export** to create new Data export.
+Congratulations on completing your Exercise 6! You have successfully created Device Template, Device and Data export to send event to SAP Inetrgation Suite, Advanced Event Mesh. 
 
-    ![plot](./images/iot-dataexport.png)
-
-2. Enter **Waste Container Export** as value. 
-
-    In the **Type of data to export** dropdown menu, select **Telemetry** and then choose **+Message property filter**.
-
-    ![plot](./images/dataexport-new.png)
-
-3. In the **Export the data if** dropdown menu, select **all of the conditions are true**. You can configure this as per your requirement.
-
-4. In the **Name** field, enter **Device template** as value.
-
-5. In the **Operator** dropdown menu, select **Equals** and in the **Value**, enter **Waste Container v2**.
-
-    ![plot](./images/dataexport-new1.png)
-
-6. Choose **+Filter**.
-
-    ![plot](./images/dataexport-new2.png)
-
-    Enter the details as shown in the below screen shot.
-
-    ![plot](./images/dataexport-new3.png)
-
-    
-7. In the **Enrichments** section, choose **+Custom String** and enter the below key value pairs as shown below.
-
-    ![plot](./images/enrichment-custom.png)
-
-8. Choose **+Property** and enter the below key value pairs as shown below.
-
-    ![plot](./images/enrichment-property.png)
-
-9. Choose **Save**.
+Let's Continue to - [Exercise 7 - Test end to end Scenario](../ex7/README.md)
