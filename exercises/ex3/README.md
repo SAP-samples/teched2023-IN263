@@ -1,5 +1,6 @@
-## Create SAP Build Process Automation - Decisions Project
-In this section, you will configure SAP Business Rule project which will be used to determine which business action should be executed for an event. Additionally, based on your scenario you can create decision tables and business rules.
+## Exercise 3 - Configure Decision in SAP Build Process Automation: Part 01
+
+In this exercise, you will configure SAP Build Process Automation project where a Decision will be used to determine which business action should be executed for an event. Additionally, based on your scenario you will create a decision table.
 
 ### 1. Create SAP Build Process Automation Project
 
@@ -111,7 +112,9 @@ In this section, you will configure SAP Business Rule project which will be used
     ```
     ![plot](./images/RuleField.png)
 
-5. To use the decision in our CAP extension application we need to deploy the Decision created. 
+### 3. Release and Deploy SAP Build Process Automation Decision
+
+1. To use the decision in our CAP extension application we need to deploy the Decision created. 
 
     First click on **Release** to release the Decisions. 
     
@@ -121,7 +124,7 @@ In this section, you will configure SAP Business Rule project which will be used
 
     ![plot](./images/ProjectRelease.png)
 
-6. Now that the project is released, it is ready for deployment. Click on the **Deploy**
+2. Now that the project is released, it is ready for deployment. Click on the **Deploy**
 
     ![plot](./images/Deploy1.png)
 
@@ -133,12 +136,12 @@ In this section, you will configure SAP Business Rule project which will be used
 
     ![plot](./images/Deploy4.png)
 
-7. The Project is successfully deployed ! 
+3. The Project is successfully deployed ! 
 
     ![plot](./images/Deployed.png)
 
 
-8. Go to **E2BDecision** , Click on the three dots to **View Details** and Click on **View Details**
+4. Go to **E2BDecision** , Click on the three dots to **View Details** and Click on **View Details**
 
     ![plot](./images/ViewDetails.png)
 
@@ -147,6 +150,10 @@ In this section, you will configure SAP Business Rule project which will be used
     ![plot](./images/ViewDetails2.png)
  
 
+### 4. Congratulations!
 
+Congratulations on completing your Exercise 3! You have successfully configured part of SAP Build Process Automation project for Decision.
+
+Let's Continue to - [Exercise 4 - Configure Business Actions in Events-to-Business-Actions Framework](../ex4/README.md)
 
 

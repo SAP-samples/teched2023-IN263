@@ -1,6 +1,6 @@
-## Configure SAP S/4HANA Business Actions in the extension application
+## Exercise 4 - Configure Business Actions in Events-to-Business-Actions Framework
 
-In this section, you will define business action in the action-management extension application in SAP BTP. Ensure your application's **Requested State** is **Started**.
+In this exercise, you will define business action in the action-management extension application of Events-to-Business-Actions framework running on SAP BTP. Ensure your application's **Requested State** is **Started**.
 
 ### 1. Create Destinations
 
@@ -129,3 +129,9 @@ In this section, you will configure the different business actions that needs to
     Your configuration should look like this:
 
     ![plot](./images/CreatePurchaseRequisitionAction.png)
+
+### 3. Congratulations!
+
+Congratulations on completing your Exercise 4! You have successfully defined business action in the action-management extension application of Events-to-Business-Actions framework on SAP BTP.
+
+Let's Continue to - [Exercise 5 - Configure Decision in Build Process Automation: Part 02](../ex5/README.md)

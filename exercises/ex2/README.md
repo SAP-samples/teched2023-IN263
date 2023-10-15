@@ -1,4 +1,7 @@
-## SAP Integration Suite, Advanced Event Mesh Configuration
+## Exercise 2 - Configure SAP Integration Suite, Advanced Event Mesh 
+
+In this exercise, you will create REST Delivery Point, Queue, Topic Subscriptions, REST Consumer etc in SAP Integration Suite, Advanced Event Mesh. You can find the SAP Integration Suite, Advanced Event Mesh details here: [Systems and Credentials](../ex0/README.md/#4-systems-annd-credentials)
+
 
  1. To access the SAP Integration Suite, Advanced Event Mesh, navigate to **Services** > and choose **Instances and Subscriptions**.
     Choose the row for the SAP Integration Suite, Advanced Event Mesh subscription and choose **Go to Application**
@@ -180,3 +183,9 @@
      A final, configured **RDP settings** would look like this.
 
      ![plot](./images/aem-35.png)
+
+### 4. Congratulations!
+
+Congratulations on completing your Exercise 2! You have successfully configured REST Delivery Point, Queue, Topic Subscriptions, REST Consumer etc in SAP Integration Suite, Advanced Event Mesh.
+
+Let's Continue to - [Exercise 3 - Configure Decision in Build Process Automation: Part 01](../ex3/README.md)

@@ -1,6 +1,6 @@
-## Build and Deploy the Extension Application
+## Exercise 1 - Build and Deploy Events-to-Business-Actions Framework on SAP BTP 
 
-In this section, you will clone the codebase and deploy the extension application in SAP BTP. 
+In this exercise, you will clone the codebase and deploy the Events-to-Business-Actions Framework on SAP BTP using SAP Business Application Studio. You can find the SAP BTP account and SAP Business Application Studio details here: [Systems and Credentials](../ex0/README.md/#4-systems-annd-credentials)
 
 ### 1. Clone the GitHub Repository
     
@@ -83,3 +83,8 @@ Build and deploy the application. Run the following commands:
 
     ![plot](./images/postdeploy.png)
 
+### 4. Congratulations!
+
+Congratulations on completing your Exercise 1! You have successfully deployed the Events-to-Business-Actions Framework on SAP BTP.
+
+Let's Continue to - [Exercise 2 - Configure SAP Integration Suite, Advanced Event Mesh](../ex2/README.md)

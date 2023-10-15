@@ -25,7 +25,7 @@ In this event-driven scenario, based on the real-time status of the IoT Devices 
 - [Exercise 4 - Configure Business Actions in Events-to-Business-Actions Framework](exercises/ex4/)
 - [Exercise 5 - Configure Decision in Build Process Automation: Part 02](exercises/ex5/)
 - [Exercise 6 - Set up Device, Rule and Destination in Azure IoT Central](exercises/ex6/)
-- [Exercise 7 - Test end to end Scenario](exercises/ex7/)
+- [Exercise 7 - Execute the End-to-End Scenario](exercises/ex7/)
 
 
 ## Contributing

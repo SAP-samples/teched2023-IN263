@@ -1,6 +1,8 @@
-## Test the Extension Application and Execute the End-to-End Scenario
+## Exercise 7 - Execute the End-to-End Scenario
 
 Now that you have successfully deployed the extension application in SAP BTP and completed the configurations in Microsoft Azure, SAP BTP and SAP S/4HANA, follow these steps to test the application.
+
+### 1. Trigger Process by Enabling Data Export
 
 1. Log in to Microsoft Azure Portal and navigate to **Resource Group** and choose your Azure IOT Central Application. Choose **Data Export**. Select to enable data export and wait till status becomes healthy.
 
@@ -30,6 +32,8 @@ Now that you have successfully deployed the extension application in SAP BTP and
 
     ![plot](./images/ActionManagementApplication.png)
 
+### 2. Explore the Action Logs
+
 8. Click on **Business Action Logs** tile.
 
     ![plot](./images/ActionManagementHome.png)
@@ -42,5 +46,9 @@ Now that you have successfully deployed the extension application in SAP BTP and
 
     ![plot](./images/LogsDetailView.png)
 
-You have completed the end-to-end integration of events to business actions from Microsoft Azure to SAP S/4HANA with SAP BTP.
+
+### 3. Congratulations!
+
+Congratulations on completing your Exercise 7! You have successfully updated completed the end-to-end integration of events to business actions from Microsoft Azure to SAP S/4HANA with SAP BTP.
+
 

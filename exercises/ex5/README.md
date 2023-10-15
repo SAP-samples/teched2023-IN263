@@ -1,5 +1,8 @@
-## Update and Deploy SAP Build Process Automation Decisions Project
-In this section, you will update decision table and activate business rule project.
+## Exercise 5 - Configure Decision in Build Process Automation: Part 02
+
+In this exercise, you will update decision created in Exercise 3 - Configure Decision in SAP Build Process Automation: Part 01 with action id details and activate the project.
+
+### 1. Update Decision Table 
 
 1. In the SAP BTP Cockpit, Navigate to your subaccount -> **Sevices** -> **Instances and Subscriptions** , Open the SAP Build Process Automation Application.
 
@@ -47,4 +50,9 @@ In this section, you will update decision table and activate business rule proje
 
     ![plot](./images/Deployed.png)
 
+### 3. Congratulations!
+
+Congratulations on completing your Exercise 5! You have successfully updated the decision table with action id details in SAP Build Process Automation.
+
+Let's Continue to - [Exercise 6 - Set up Device, Rule and Destination in Azure IoT Central](../ex6/README.md)
 
