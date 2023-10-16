@@ -2,8 +2,41 @@
 
 In this exercise, you will clone the codebase and deploy the Events-to-Business-Actions Framework on SAP BTP using SAP Business Application Studio. You can find the SAP BTP account and SAP Business Application Studio details here: [Systems and Credentials](../ex0/README.md/#4-systems-annd-credentials)
 
-### 1. Clone the GitHub Repository
+### 1. Discover Events-to-Business-Actions Framework
+
+>**The Events-to-Business Actions Framework implements an event-driven architecture which enables integration of SAP and non-SAP systems which can be source for events to SAP business systems like SAP S/4HANA, SAP Customer Experience or SAP Asset Performance Management etc.**
+
+<img src="./images/framework.png" width="75%" height="90%" />  
     
+<br>
+
+**Understanding the framework**
+
+The framework is developed using SAP Cloud Application Programming (CAP) Model and Node.js. It has primarily 3 components.
+1. **Modeler**
+    - Using the Modeler UI, you can configure the business actions that need to be triggered in the Business systems (Ex: Creation of Purchase Order Requisition in SAP S/4HANA, Service Ticket in SAP Service Cloud etc.) based on the incoming event. Modeler UI is built using SAP Fiori elements and provides the following tiles to configure action types, actions, and monitor the business action execution logs.
+    - “Manage action” tile can be used to configure the business actions. It is integrated with SAP Destination Service so that you can select the required destination configured for SAP business system to add the endpoint and the payload that is needed to create the business action.
+    - The modeler supports defining and chaining actions based on the context flow as depicted in below figure .
+        - “Default action” is used by the processor to determine which main action needs to be triggered for an incoming event. Only one default action can be defined in modeler.
+        - “Main action” is the action that can be used to create a transaction in the business system (Purchase Order Requisition, Service Tickets etc.).
+        - “Pre-actions” are actions that are like supporting actions that are executed before the “Main Action” so that you can use the output parameters from them while creating “Main-Action”.
+        - “Post-actions” are actions that are executed after the “Main Action” is successfully executed that you can use to trigger further business processes or notify any users/systems of the Business action creation.    
+        <img src="./images/actionslogicflow.png" width="75%" height="90%" />  
+
+2. **Processor**
+    - Processor is the backend module that receives the from SAP Inetrgation Suite, Advanced Event Mesh topic and executes the corresponding business actions in the SAP S/4HANA system.
+    - The processor executes the following steps once it receives an event:
+        - Processes ‘Default Action’ to determine which business actions (Main Action) needs to be processed.
+        - Fetches the respective business action definition and the associated pre/post actions.
+        - Executes the defined pre-actions one by one and then executes the main business action. The processor replaces the respective dynamic values from the event/pre-actions before executing the main action.
+        - Once the main action is successfully created, it executes the post-actions that are defined for this main action.
+
+3. **Monitor**
+    - Monitor application is used to monitor the status of the business actions and check the logs for troubleshooting.
+    - You can drill down to the individual action execution to find out the respective logs and can be used for troubleshooting any failed execution.
+
+For more details about the framework, you can refer the blog here: [Explore “Events-To-Business Actions” Framework](https://blogs.sap.com/2023/02/01/part-2-explore-events-to-business-actions-framework/)
+
 
 Access the [Event To Action Framework](https://github.com/SAP-samples/btp-events-to-business-actions-framework) GitHub repository to download the project.
 
