@@ -85,11 +85,12 @@ All required services have been added to the BTP account and the details are pro
 
     Then choose **open**.
 
-    ![plot](./images/BAS_6.png)
+    <img src="./images/BAS_6.png" width="90%" height="90%" />
+    <!-- ![plot](./images/BAS_6.png) -->
 
 4. Navigate to **action-management** directory. To do so, right click on **action-management** folder and choose **Open in integrated terminal**. 
 
-     <img src="./images/BAS_7.jpg" width="90%" height="90%" />
+    <img src="./images/BAS_7.jpg" width="90%" height="90%" />
 
     Your terminal will be as shown below. 
 
