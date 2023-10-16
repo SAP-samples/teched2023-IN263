@@ -134,7 +134,9 @@ In this section, you will configure the different business actions that needs to
     > - Content-Type: **application/json**    
     > - Method: **POST**     
     > - Relative Path: **/API_PURCHASEREQ_PROCESS_SRV/A_PurchaseRequisitionHeader**     
-    > - Payload:  **```
+    > - Payload:  
+        <script src="https://gist.github.com/AjitKP91/a8598d7851d894403f8ba154966bae38.js"></script>
+        <!-- ```
                 {
                     "PurchaseRequisition": "",
                     "PurchaseRequisitionType": "NB",
@@ -160,7 +162,7 @@ In this section, you will configure the different business actions that needs to
                         ]
                     }
                 }
-                ```**    
+        ```    -->
     > - Is Csrf Token Needed?: **true**     
 
     **Related Actions:**     
