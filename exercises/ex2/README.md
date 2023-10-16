@@ -2,189 +2,216 @@
 
 In this exercise, you will create REST Delivery Point, Queue, Topic Subscriptions, REST Consumer etc in SAP Integration Suite, Advanced Event Mesh. You can find the SAP Integration Suite, Advanced Event Mesh details here: [Systems and Credentials](../ex0/README.md/#4-systems-annd-credentials)
 
+### 1. Discover SAP Integration Suite, Advanced Event Mesh
 
- 1. To access the SAP Integration Suite, Advanced Event Mesh, navigate to **Services** > and choose **Instances and Subscriptions**.
-    Choose the row for the SAP Integration Suite, Advanced Event Mesh subscription and choose **Go to Application**
+### 2. Get REST Connection details
+1. Open the [SAP Integration Suite, Advanced Event Mesh](https://eu10.console.pubsub.em.services.cloud.sap/login?tenant-id=0e652f06-6ee7-48d1-8877-b84274456b22) application.
 
-    ![plot](./images/access-aem.png)
+2. Navigate to **Cluster Manager** . 
 
-2. Choose **Cluster Manager** in the SAP Integration Suite, Advanced Event Mesh Application. 
+    <img src="./images/aem-application.png" width="90%" height="90%" />   
 
-    ![plot](./images/aem-application.png)
+    <!-- ![plot](./images/-application.png) -->
+
+3. Unselect **Only show my services** option and then choose **TechEd-IN263**.
+
+    <img src="./images/aem-0.jpg" width="90%" height="90%" />  
 
 
+4. The following screen will be displayed.
 
-4. Click on the created service **TechEd-IN263**
+    <img src="./images/aem-1.png" width="90%" height="90%" />     
+    <!-- ![plot](./images/aem-1.png) -->
 
-    ![plot](./images/aem-1.png)
+    Click on the **connect** tab, expand the **REST** tile and then keep a note of messaging connectivity information like **Username, Password, Secured REST Host**.
 
-    Click on the **connect** tab and expand the **REST** tile to get the messaging connectivity information.
+    <img src="./images/aem-2.png" width="90%" height="90%" />       
+    <!-- ![plot](./images/aem-2.png) -->
 
-    ![plot](./images/aem-2.png)
+### 3. Configure a Queue and Topic subscription
 
-5. Configuring a **REST Delivery Point**
-     Next, you must configure a queue and a REST delivery point on Message VPN.
+1. Click on **Open Broker Manager**.
 
-     **a.** Click on **Open Broker Manager**.
+    <img src="./images/open-broker-manager.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/open-broker-manager.png) -->
 
-     ![plot](./images/open-broker-manager.png)
+2. The **Broker Manager** application loads. The next step is to create a queue, on the left pane click on **Queues**  
 
-     **b.** The **Broker Manager** application loads. The next step is to create a queue, on the left pane click on **Queues**  
+    <img src="./images/aem-4.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/aem-4.png) -->
 
-     ![plot](./images/aem-3.png)
+3. You will see the following screen, Click on **+ Queue** to create a new queue.
 
-     You will see the following screen, Click on **Queues** to create a new queue.
+    <img src="./images/aem-5.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/aem-5.png) -->
 
-     ![plot](./images/aem-4.png)
+4. Provide name as **Q-IN263-XXX** where XXX is the id from your email id.
 
-     Click on **+Queue** 
+    <img src="./images/aem-6.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/aem-6.png) -->
 
-     ![plot](./images/aem-5.png)
+5. Enable both incoming and outgoing configuration and Click on **Apply**
 
-     **c.** Create a Queue by name **Q-IN263-XXX**
+    <img src="./images/aem-7.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/aem-7.png)     -->
 
-     ![plot](./images/aem-6.png)
+6. Queue successfully created, now Click on the Queue. 
 
-     Enable both incoming and outgoing configuration and Click on **Apply**
+    <img src="./images/aem-8.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/aem-8.png)     -->
 
-     ![plot](./images/aem-7.png)    
+7. Add a **Topic Subscription** to the queue. Click on the **Subscriptions** Tab.
 
-     Queue successfully created, now Click on the Queue. 
+    <img src="./images/aem-9.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/aem-9.png) -->
 
-     ![plot](./images/aem-8.png)    
+8. Then click on **+ Subscription** to add a topic.
 
-     **d.** Add a **Topic Subscription** to the queue.
+    <img src="./images/aem-10.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/aem-10.png) -->
 
-     Click on the **Subscriptions** Tab.
+9. In the **Create Subscription** screen, type in the topic name as **IN263-XXX/messages** where XXX is the id from your email id and click **Create**
 
-     ![plot](./images/aem-9.png)
+    <img src="./images/aem-11.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-11.png)     -->
 
-     Then click on **+ Subscription** to add a topic.
+    Topic Subscription successfully created.  
 
-     ![plot](./images/aem-10.png)
+    <img src="./images/aem-12.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-12.png)    -->
 
-     In the **Create Subscription** screen, type in the topic name as **IN263-XXX/messages** and click **Create**
+### 4. Configure a REST Delivery Point and Queue Binding.
 
-     ![plot](./images/aem-11.png)    
-
-     Topic Subscription successfully created. 
-
-     ![plot](./images/aem-12.png)
-
-     **e.** Create a **REST Delivery Point** object
-
-     On the left pane click on **Clients** and then Navigate to **REST** tab.
-
-     ![plot](./images/aem-13.png)
+1. On the left pane click on **Clients** and then Navigate to **REST** tab.
     
-     ![plot](./images/aem-14.png)
+    <img src="./images/aem-14.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-14.png) -->
 
-     Click on ** + REST Delivery Point** 
+2. Click on **+ REST Delivery Point** 
 
-     ![plot](./images/aem-15.png)
+    <img src="./images/aem-15.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-15.png) -->
 
-     Fill the **RDP Name** as **IN263-RDP-XXX**
+3. Fill the **RDP Name** as **IN263-RDP-XXX** where XXX is the id from your email id
     
-     ![plot](./images/aem-16.png)
+    <img src="./images/aem-16.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-16.png) -->
     
-     Configure the REST Delivery Point and Click on **Apply**
+    Select **Enabled** and Click on **Apply**
 
-     ![plot](./images/aem-17.png)  
+    <img src="./images/aem-17.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-17.png)   -->
 
-     REST Delivery Point successfully created
+    REST Delivery Point successfully created
      
-     ![plot](./images/aem-18.png)  
+    <img src="./images/aem-18.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-18.png)   -->
 
-     **f.**  Create a Queue Binding object
+4. Create a Queue Binding to the queue you created previously. This indicates the RDP where to fetch messages from.     
+    **Note:** that REST Delivery Points (RDPs) can be bound to multiple queues.
 
-     Create a queue binding to the queue you created previously. This will tell the RDP where to fetch messages from. **Note:** that REST Delivery Points (RDPs) can be bound to multiple queues.
+    Click on the REST Delivery Point **IN263-RDP-XXX** created in the previous step. Navigate to **Queue Bindings** Tab.
 
-     Click on the **IN263-RDP-XXX** created in the previous step. Click on **Queue Bindings** Tab.
+    <img src="./images/aem-19.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-19.png) -->
 
-     ![plot](./images/aem-19.png)
+5. Click on **+ Queue Binding** to create queue binding.
 
-     Click on **+ Queue Binding**
+    <img src="./images/aem-20.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-20.png) -->
 
-     ![plot](./images/aem-20.png)
+6. Choose the queue created reviously from the drop down - **Q-IN263-XXX** where XXX is the id from your email id
 
-     Choose the queue created reviously from the drop down - **Q-IN263-XXX**
+    <img src="./images/aem-21.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-21.png) -->
 
-     ![plot](./images/aem-21.png)
+    Click on **Create**
 
-     Click on **Create**
+    <img src="./images/aem-22.png" width="90%" height="90%" />
+     <!-- ![plot](./images/aem-22.png) -->
 
-     ![plot](./images/aem-22.png)
+7. Set the POST reuqest target to **/api/events**. This is the end point to which events will be forwarded which is nothing but extension application of Events-to-Business-Actions framework.
+    Then Choose **Apply**
 
-     Set the POST target where the requests would be sent - **/api/events** and then Choose **Apply**
+    <img src="./images/aem-23.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-23.png) -->
 
-     ![plot](./images/aem-23.png)
+    **Note:** that the RDP is down - it will automatically start up when a REST consumer makes a connection to the RDP.
 
-     **Note:** that the RDP is down - it will automatically start up when a REST consumer makes a connection to the RDP.
+    <img src="./images/aem-24.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-24.png) -->
 
-     ![plot](./images/aem-24.png)
+8. Create a **REST Consumer** object. Navigate to **REST Consumers** Tab and click on **+ REST Conusmer**
 
-     **g.** Create a **REST Consumer** object.
+    <img src="./images/aem-25.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-25.png) -->
 
-     Navigate to **REST Consumers** Tab and click on **+ REST Conusmer**
+    Fill in the **REST Consumer Name** as **IN263-RC-XXX** where XXX is the id from your email id and choose **Create**
 
-     ![plot](./images/aem-25.png)
+    <img src="./images/aem-26.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-26.png) -->
 
-     Fill in the **REST Consumer Name** as **IN263-RC-XXX** and choose **Create**
+9. To get the **Host** , Navigate to the [SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22) and then to Cloud Foundary Space where the application is deployed.
 
-     ![plot](./images/aem-26.png)
+    <img src="./images/aem-27.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-27.png) -->
 
-     Enable the **REST Consumer** and set HOST:PORT details of the message HTTP listener. 
+10. Click on **action-management-srv** application which will open application details.
 
-     To Fill the **Host** , Navigate to the Cloud Foundary Space where the application is deployed.
+    <img src="./images/aem-28.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-28.png) -->
 
-     ![plot](./images/aem-27.png)
+    Copy the link under **Application Routes**,. (**Note:** Remove the **https://** from the URL while copying).
 
-     Click on **action-management-srv**.
+    <img src="./images/aem-29.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-29.png) -->
 
-     ![plot](./images/aem-28.png)
+    Then paste it in HOST field on Edit REST Consumer configuration page.
 
-     Copy the link under **Application Routes**,. **Note:** Strip the **https://** before pasting the value in the **Host** field
+11. Fill in the following Value
+    - **Port** as **443**
+    - Select **POST** as the **HTTP Method**.
+    - Enable the TLS.
+    - Keep **Outgoing Connection Count** value as **1**.
+    - Fill the **Max Response Wait Time (sec)** as **30**
+    - Populate **Connection Retry Delay (sec)** field with **300**
+    - Choose **OAuth 2.0 Client Credentials** as the **Authentication Scheme**.
 
-     ![plot](./images/aem-29.png)
+12. Go back to the [SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22) 
+    and then to Cloud Foundary Space. Navigate to **Services** > **Instances** and under the **Instances** select **action-management-auth**. 
 
-     Fill in the Value of **Port** as **443**
+    <img src="./images/aem-30.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-30.png) -->
 
-     Select **POST** as the **HTTP Method**.
+    Under the **Service Keys** the key named **action-management-auth-key** is already created. Click on the **View** Option to get the **OAuth 2.0 Client Credentials**.  
 
-     Enable the TLS.
+    <img src="./images/aem-31.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-31.png) -->
 
-     Keep **Outgoing Connection Count** value as **1**.
+13. Copy the **clientid**, **clientsecret** and **url** and paste it on the **REST Consumer** configuration as below:
+    - Client ID : ```clientid```
+    - Client Secret: ```clientsecret```
+    - Token Endpoint URL: ```url```/oauth/token 
 
-     Fill the **Max Response Wait Time (sec)** as **30**
+    <img src="./images/aem-32.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-32.png) -->
 
-     Populate **Connection Retry Delay (sec)** field with **300**
+    Make sure to follow step 9 to 13 carefully and Fill the remaining fields as shown in the screenshot below. Then choose **Apply**.
 
-     From the drop down menu, choose **OAuth 2.0 Client Credentials** as the **Authentication Scheme**.
+    <img src="./images/aem-33.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-33.png)   -->
 
-     Next, Go to your **BTP subaccount** ,Navigate to **Services** > **Instances** and under the **Instances** select **action-management-auth**.
+    REST Consumer successfully created
 
-     ![plot](./images/aem-30.png)
+    <img src="./images/aem-34.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-34.png)   -->
 
-     Under the **Service Keys** the key named **action-management-auth-key** is already created. Click on the **View** Option to get the **OAuth 2.0 Client Credentials**.  
+    A final, configured **RDP settings** would look like this.
 
-     ![plot](./images/aem-31.png)
+    <img src="./images/aem-35.png" width="90%" height="90%" />
+    <!-- ![plot](./images/aem-35.png) -->
 
-     Copy the **clientid**, **clientsecret** and **url**. Navigate back to the **REST Consumer** configuration and paste the values for **Client ID** and **Client Secret**. Paste the **url** copied earlier in the **Token Endpoint URL** and appened **/oauth/token** at the end of the **url**. 
-     Effective **Token Endpoint URL** is **url/oauth/token**.
-
-     Fill the remaining fields as shown in the screenshot below and click on **Apply**.
-
-     ![plot](./images/aem-33.png)  
-
-     REST Consumer successfully created
-
-     ![plot](./images/aem-34.png)  
-
-     A final, configured **RDP settings** would look like this.
-
-     ![plot](./images/aem-35.png)
-
-### 4. Congratulations!
+### 5. Congratulations!
 
 Congratulations on completing your Exercise 2! You have successfully configured REST Delivery Point, Queue, Topic Subscriptions, REST Consumer etc in SAP Integration Suite, Advanced Event Mesh.
 
