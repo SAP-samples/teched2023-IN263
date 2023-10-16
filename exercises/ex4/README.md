@@ -80,10 +80,23 @@ In this section, you will configure the different business actions that needs to
     > - Content-Type: **application/json**    
     > - Method: **POST**     
     > - Relative Path: **/v2/rule-services**    
-    > - Payload: **```{ "RuleServiceId": "<DecisionID>",
-                "Vocabulary": [ {   "EventInfo":{ "SourceSystem": "${{event.data.enrichments.System}}",
-                                    "DeviceTemple": "${{event.data.enrichments.DeviceTemplate}}",
-                                    "DeviceLocation": "${{event.data.enrichments.Location}}" }  } ] }```**    
+    > - Payload: 
+    
+    ```json 
+    {
+    "RuleServiceId": "<DecisionID>",
+    "Vocabulary": [
+        {
+        "EventInfo": {
+            "SourceSystem": "${{event.data.enrichments.System}}",
+            "DeviceTemple": "${{event.data.enrichments.DeviceTemplate}}",
+            "DeviceLocation": "${{event.data.enrichments.Location}}"
+        }
+        }
+    ]
+    }
+    ```
+
     > - Action Id Path in Response: **Result[0].ActionInfo.ActionId**
 
     Your configuration should look like this:
@@ -136,47 +149,51 @@ In this section, you will configure the different business actions that needs to
     > - Relative Path: **/API_PURCHASEREQ_PROCESS_SRV/A_PurchaseRequisitionHeader**     
     > - Payload:  
 
-    <script src="https://gist.github.com/AjitKP91/a8598d7851d894403f8ba154966bae38.js"></script>
-
-
-        <!-- ```
+   ```json
+    {
+        "PurchaseRequisition": "",
+        "PurchaseRequisitionType": "NB",
+        "PurReqnDescription": "Refill Container ${{event.data.enrichments.DeviceName}}",
+        "SourceDetermination": false,
+        "PurReqnDoOnlyValidation": false,
+        "to_PurchaseReqnItem": {
+            "results": [
                 {
-                    "PurchaseRequisition": "",
-                    "PurchaseRequisitionType": "NB",
-                    "PurReqnDescription": "Refill Container ${{event.data.enrichments.DeviceName}}",
-                    "SourceDetermination": false,
-                    "PurReqnDoOnlyValidation": false,
-                    "to_PurchaseReqnItem": {
-                        "results": [
-                            {
-                            "PurchaseRequisition": "",
-                            "PurchaseRequisitionItem": "10",
-                            "PurchaseRequisitionType": "NB",
-                            "PurchaseRequisitionItemText": "Re-fill Container",
-                            "Material": "TG10",
-                            "MaterialGroup": "L001",
-                            "RequestedQuantity": "1",
-                            "PurchasingOrganization": "1710",
-                            "PurchasingGroup": "001",
-                            "Plant": "1710",
-                            "OrderedQuantity": "1",
-                            "DeliveryDate": "2023-11-02T00:00:00"
-                            }
-                        ]
-                    }
+                "PurchaseRequisition": "",
+                "PurchaseRequisitionItem": "10",
+                "PurchaseRequisitionType": "NB",
+                "PurchaseRequisitionItemText": "Re-fill Container",
+                "Material": "TG10",
+                "MaterialGroup": "L001",
+                "RequestedQuantity": "1",
+                "PurchasingOrganization": "1710",
+                "PurchasingGroup": "001",
+                "Plant": "1710",
+                "OrderedQuantity": "1",
+                "DeliveryDate": "2023-11-02T00:00:00"
                 }
-        ```    -->
+            ]
+        }
+    }
+    ```   
+
     > - Is Csrf Token Needed?: **true**     
 
-    **Related Actions:**     
-    Choose create and enter following values: 
+    <br>
+
+    **Related Actions:**      
+    Choose **Create** and enter following values: 
     > - Flow Type: **Post Action**
     > - Action: **Update Device Status**
+
+    <br>
 
     Your configuration should look like this:
 
     <img src="./images/CreatePurchaseRequisitionAction.png" width="90%" height="90%" />
     <!-- ![plot](./images/CreatePurchaseRequisitionAction.png) -->
+
+    <br>
 
     Final Actions list should look like as shown below:
 
