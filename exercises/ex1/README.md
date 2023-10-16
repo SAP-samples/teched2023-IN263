@@ -37,84 +37,133 @@ The framework is developed using SAP Cloud Application Programming (CAP) Model a
 
 For more details about the framework, you can refer the blog here: [Explore “Events-To-Business Actions” Framework](https://blogs.sap.com/2023/02/01/part-2-explore-events-to-business-actions-framework/)
 
+### 2. Required SAP BTP Services
 
-Access the [Event To Action Framework](https://github.com/SAP-samples/btp-events-to-business-actions-framework) GitHub repository to download the project.
+These are the technical prerequistics to deploy Events-to-Business-Actions Framework on SAP BTP.
+- **Cloud Foundry Runtime** : Required for deploying and running the extension application in SAP BTP.
+- **Authorization & Trust Management Service** : Required for securing the extension application in SAP BTP.
+- **SAP Integration Suite,Advanced Event Mesh** : Required to receive events from Microsoft Azure IoT Central.
+- **SAP HANA Cloud** : Backing service for the framework.
+- **SAP HANA Schemas & HDI Containers** : Application database required to store action configuration and logs.
+- **SAP Build Process Automation - Decisions capability** : SAP Build Process Automation - Decisions service to configure business decisions that needs to be taken based on the type of event received from Microsoft Azure IoT Central.
+- **SAP Connectivity Service** : To establish connections between cloud applications and on-premise systems.
+- **SAP Destination Service** : To find the destination information required to access a remote service or system from your extension application
+- **SAP Private Link Service** : To establishe a private connection between selected SAP BTP services and selected services in your own IaaS provider accounts.
+- **SAP Business Application Studio** : A powerful and modern development environment, tailored for efficient development of business applications for the Intelligent Enterprise.
 
-### 2. Check the Prerequisites for Deployment
+All required services have been added to the BTP account and the details are provided here: [Systems and Credentials](../ex0/README.md/#4-systems-annd-credentials)
 
-Ensure you have added the required entitlements as described in section **Step1-Set-Up** page before deployment.
+### 3. Deploy the Extension Application - Step by Step Solution Guide
 
-### 3. Deploy the Extension Application
+1. Open the [SAP Business Application Studio](https://in263-ol7jr9xc.eu10cf.applicationstudio.cloud.sap/index.html). If you are getting an option to choose IDP, then choose **tdct3ched1.accounts.ondemand.com**.
 
-Build and deploy the application. Run the following commands:
+    <img src="./images/bas-entry-00.jpg" width="90%" height="90%" />  
 
-**Note**: Ensure you have Cloud MBT Build Tool. Refer [The Cloud MTA Build Tool (MBT)](https://help.sap.com/docs/HANA_CLOUD_DATABASE/c2b99f19e9264c4d9ae9221b22f6f589/1412120094534a23b1a894bc498c2767.html) for more details.
+2. Create a dev space by choosing **Create Dev Space** 
 
-1. Open the SAP Business Application Studio and follow the steps below:
+    <img src="./images/BAS_1.png" width="90%" height="90%" />  
+    <!-- ![plot](./images/BAS_1.png) -->
 
-    ![plot](./images/BAS_1.png)
+    Provide a name e.g. **teched_xxx** where xxx is your id from email and choose **Full Stack Cloud Application** :    
 
-    ![plot](./images/BAS_2.png)
+    <img src="./images/BAS_2.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/BAS_2.png) -->
 
-    ![plot](./images/BAS_3.png)
+    Wait till the status of your space shows **running**. Then click on the space which will open the application.
 
-    Click on **Clone from Git** and copy the Git Clone url of this github repo and paste it.
+    <img src="./images/BAS_3.png" width="90%" height="90%" />
+    <!-- ![plot](./images/BAS_3.png) -->
 
-    ![plot](./images/BAS_4.png)
+    
+3. Click on **Clone from Git** and provide url: **https://github.com/SAP-samples/teched2023-IN263.git**. 
 
-    ![plot](./images/BAS_5.png)
+    <img src="./images/BAS_4.png" width="90%" height="90%" />
+    <!-- ![plot](./images/BAS_4.png) -->
+
+    <img src="./images/BAS_5.png" width="90%" height="90%" />
+    <!-- ![plot](./images/BAS_5.png) -->
+
+    Then choose **open**.
 
     ![plot](./images/BAS_6.png)
 
-    Navigate to **action-management** directory. To do so, right click on **action-management** folder and choose **Open in integrated terminal**. Your terminal will be as shown below. 
+4. Navigate to **action-management** directory. To do so, right click on **action-management** folder and choose **Open in integrated terminal**. 
 
-    ![plot](./images/BAS_8.png)
+     <img src="./images/BAS_7.jpg" width="90%" height="90%" />
 
-    Fetch the dependencies.
+    Your terminal will be as shown below. 
 
-        ```
-        npm install
-        ```
-    Build action-management modules.
+    <img src="./images/BAS_8.png" width="90%" height="90%" />
+    <!-- ![plot](./images/BAS_8.png) -->
 
-        ```
-        npm run build
-        ```
-    Log in to your subaccount in SAP BTP to deploy the extension application. For this follow the below step. 
+    Install the dependencies.
+    ```cmd 
+    npm install
+    ```
 
-    ![plot](./images/BAS_9.png)
-
-    ![plot](./images/BAS_10.png)
-
-    ![plot](./images/BAS_11.png)
-
-    ![plot](./images/BAS_12.png)
-
-    ![plot](./images/BAS_13.png)
-
-    ![plot](./images/BAS_14.png)
-
-    ![plot](./images/BAS_15.png)
-
-    ![plot](./images/BAS_16.png)
-
-    Push the application to your subaccount.
+    Build action-management application using following command:
 
     ```
+    npm run build
+    ```
+
+5. Log in to Cloud Foundry Environment of your subaccount in SAP BTP to deploy the framework. For this follow the below step. 
+
+    Open **Command Palette**: 
+
+    <img src="./images/BAS_9.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/BAS_9.png) -->
+
+    Search and Choose **CF: Login to Cloud Foundry** in the prompt.
+
+    <img src="./images/BAS_10.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/BAS_10.png) -->
+
+    This will open up the Cloud Foundry Sign In page. Choose **SSO Passcode** as authentication method. Then Click on **Open a new browser page to generate your SSO passcode** to generate your passcode. 
+
+    <img src="./images/BAS_11.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/BAS_11.png) -->
+
+    If you are seeing **Choose Identity Provider** screen as show below, then fill **tdct3ched1-platform** as value in provider and choose **Sign in with alternative identity provider**.
+
+    <img src="./images/BAS_12.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/BAS_12.png) -->
+
+    Copy the **SSO passcode**.
+
+    <img src="./images/BAS_13.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/BAS_13.png) -->
+
+    Paste the passcode. and Choose **Sign in**.
+
+    <img src="./images/BAS_14.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/BAS_14.png) -->
+
+    Once signed in successfully, Choose Org and Space as shown below. Based on authorization, you should see one org and one space only. Then Choose **Apply**
+
+    <img src="./images/BAS_15.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/BAS_15.png) -->
+
+    Then a successfull notification will be displayed as shown below:
+
+    <img src="./images/BAS_16.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/BAS_16.png) -->
+
+6. Deploy the application using following command in your terminal.
+
+    ```cmd
     npm run deploy
     ```
 
-    ![plot](./images/BAS_17.png)
+    You should see the following logs as shown. Keep a note of the url shown in the log for action-management application.
 
+    <img src="./images/BAS_17.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/BAS_17.png) -->
 
+    Alternatively, You can also check the status of your applications in the [SAP BTP cockpit](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22) by navigation to Space and Application. Click on **action-management** application and keep a note of the URL.
 
-2. You can also check the status of your applications in the SAP BTP cockpit. Copy the value of the extension application URL.
-
-    ![plot](./images/SAPBTPCockpit.png)
-
-3. In the SAP BTP cockpit, navigate to your subaccount and choose **Services** > **Instances and Subscriptions**. Check if you have all of the instances created post deployment as shown below. Make sure the status of all of the instances are **Created**.
-
-    ![plot](./images/postdeploy.png)
+    <img src="./images/SAPBTPCockpit.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/SAPBTPCockpit.png) -->
 
 ### 4. Congratulations!
 
