@@ -34,16 +34,6 @@
                                     "tileType": "sap.ushell.ui.tile.StaticTile"
                                 },
                                 {
-                                    "id": "sap.paa.action.mgmt.ui.comsapbpmrule.ruleeditor",
-                                    "properties": {
-                                        "targetURL": "/comsapbpmrule.ruleeditor/index.html",
-                                        "title": "Manage Business Rules",
-                                        "subtitle": "define decisions",
-                                        "icon": "sap-icon://decision"
-                                    },
-                                    "tileType": "sap.ushell.ui.tile.StaticTile"
-                                },
-                                {
                                     "id": "sap.paa.action.mgmt.ui.logs-sap-paa-action-mgmt-ui-logs-inbound",
                                     "properties": {
                                         "targetURL": "#Logs-view",
