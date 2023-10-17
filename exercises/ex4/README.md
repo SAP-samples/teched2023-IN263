@@ -122,12 +122,14 @@ In this section, you will configure the different business actions that needs to
     > - Content-Type: **application/json**    
     > - Method: **PATCH**   
     > - Relative Path: **${{event.data.deviceId}}/properties?api-version=2022-07-31**    
-    > - Payload: **```{  "Status": "Re-fill Request Created"  }```**
+    > - Payload: 
 
     Your configuration should look like this:
 
     <img src="./images/UpdateDeviceAction.png" width="90%" height="90%" />
     <!-- ![plot](./images/UpdateDeviceAction.png) -->
+
+    Note that, we will update the payload later.
 
 <br>
 
@@ -199,6 +201,41 @@ In this section, you will configure the different business actions that needs to
 
     <img src="./images/FinalActions.png" width="90%" height="90%" />
     <!-- ![plot](./images/FinalActions.png) -->
+
+9. Go back to the list page and Click on **Settings**
+
+    <img src="./images/ActionsListSettings00.png" width="90%" height="90%" />
+
+    On **View Settings** pop up, make sure you are on **Columns** tab. Then follow below list of steps:    
+        - Unselect **Action Name**    
+        - Select **ID**
+        - Click on **Move to Top**    
+        - Choose **Ok**     
+
+    <img src="./images/ActionsListSettings01.png" width="90%" height="90%" />
+
+    Now the action list should have the action ids for each action. Copy the Action ID for Main Action **Create Purchase Requisiton** and Keep a note of the ID.
+
+    <img src="./images/ActionsListSettings02.png" width="90%" height="90%" />
+
+10. Next, Click on **Update Device Status**
+
+    <img src="./images/EditIoTAction_00.png" width="90%" height="90%" />
+
+    Choose **Edit** to update payload for the action.
+
+    <img src="./images/EditIoTAction_01.png" width="90%" height="90%" />
+
+    Replace ```<MainActionId>``` with the ID noted from step 9 in the below payload and update in **Payload** input and Choose **Save**
+
+    ```json
+    {
+        "Status": "Under Maintenance",
+        "PRId": "${{main.<MainActionId>.d.results.PurchaseRequisition}}"
+    }
+    ```   
+
+     <img src="./images/EditIoTAction_02.png" width="90%" height="90%" />
 
 ### 3. Congratulations!
 
