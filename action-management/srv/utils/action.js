@@ -18,7 +18,7 @@ function buildActionObject(path, dest, method, payload, contentType) {
     return actionObject;
 }
 
-function replaceTemplateData(eventData, actionResponses, actionTemplateData) {
+const replaceTemplateData = (eventData, actionResponses, actionTemplateData) => {
     let actionData = actionTemplateData.split('${{'), templatePath, parsedValue, subpathList, jsonData;
     if (actionData.length > 1) {
         for (let i = 0; i < actionData.length; i++) {
@@ -65,7 +65,7 @@ async function getDefaultAction(logHeadId) {
     return defaultActionDetails;
 }
 
-function getValueByJSONPath(data, jsonPath) {
+const getValueByJSONPath = (data, jsonPath)=> {
     let subpaths = jsonPath.split('.'), subpath, index, output = data;
     for (let i = 0; i < subpaths.length; i++) {
         subpath = subpaths[i];
@@ -91,21 +91,21 @@ async function getActionInformations(actionId, logHeadId) {
     return { mainActionDetails, relatedPreActions, relatedPostActions };
 }
 
-async function buildDataAndExecuteAction(eventMessage, actionResponses, reqActionDetails, destToken, httpsAgent, logHeadId) {
+const buildDataAndExecuteAction = async (eventMessage, actionResponses, reqActionDetails, destToken, httpsAgent, logHeadId) => {
     const actionCategoryId = reqActionDetails.categoryId == undefined ? reqActionDetails.ca_categoryId : reqActionDetails.categoryId;
     const actionCategoryDesc = reqActionDetails.categoryDescr == undefined ? reqActionDetails.ca_categoryDescr : reqActionDetails.categoryDescr;
 
-    const actionId = actionCategoryId === 'CHILD' ? reqActionDetails.ca_ID : reqActionDetails.ID;
-    const templatePayload = actionCategoryId === 'CHILD' ? reqActionDetails.ca_payload : reqActionDetails.payload;
-    const templatePath = actionCategoryId === 'CHILD' ? reqActionDetails.ca_path : reqActionDetails.path;
-    const dest = actionCategoryId === 'CHILD' ? reqActionDetails.ca_dest : reqActionDetails.dest;
-    const method = actionCategoryId === 'CHILD' ? reqActionDetails.ca_method : reqActionDetails.ma_method;
-    const contentType = actionCategoryId === 'CHILD' ? reqActionDetails.ca_contentType : reqActionDetails.ma_contentType;
-    const isTokenNeeded = actionCategoryId === 'CHILD' ? reqActionDetails.ca_isCsrfTokenNeeded : reqActionDetails.isCsrfTokenNeeded;
+    const actionId = actionCategoryId == "CHILD" ? reqActionDetails.ca_ID : reqActionDetails.ID;
+    const tPayload = actionCategoryId == "CHILD" ? reqActionDetails.ca_payload : reqActionDetails.payload;
+    const templatePath = actionCategoryId == "CHILD" ? reqActionDetails.ca_path : reqActionDetails.path;
+    const dest = actionCategoryId == "CHILD" ? reqActionDetails.ca_dest : reqActionDetails.dest;
+    const method = actionCategoryId == "CHILD" ? reqActionDetails.ca_method : reqActionDetails.ma_method;
+    const contentType = actionCategoryId == "CHILD" ? reqActionDetails.ca_contentType : reqActionDetails.ma_contentType;
+    const isTokenNeeded = actionCategoryId == "CHILD" ? reqActionDetails.ca_isCsrfTokenNeeded : reqActionDetails.isCsrfTokenNeeded;
     //replace template with dynamic data in payload and url path
-    let payload = templatePayload;
-    if(templatePayload && templatePayload !== null){
-        payload = replaceTemplateData(eventMessage, actionResponses, templatePayload);
+    let payload = tPayload;
+    if(tPayload && tPayload !== null){
+        payload = replaceTemplateData(eventMessage, actionResponses, tPayload);
     }
 
     await logUtil.createLogItem(logHeadId, 'INFO', `[${actionCategoryDesc}] For Action:${actionId}, Final Payload`, JSON.stringify(payload));

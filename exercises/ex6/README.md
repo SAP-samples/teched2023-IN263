@@ -110,23 +110,24 @@ During this step, you'll initially establish a Destination, outlining the connec
     <img src="./images/data-export03.jpg" width="90%" height="90%" />
 
 5. In the **Export the data if** dropdown menu, select **all of the conditions are true**. Add following filters as shown in following image:
-    - Device Template = Waste Container v2
-    - Filling Level LT 30
-    - Waste Container / Status = Working    
+    - Device Template = **Waste Container v2**
+    - Filling Level **LT 30**
+    - Waste Container / Status = **Working**  
+    - Device name = **WC-IN263-XXX**, replace XXX with the id from your email (device name that you created in step 2 of Part 4)
     <img src="./images/data-export04.jpg" width="90%" height="90%" />
 
     <!-- ![plot](./images/dataexport-new.png) -->
 
 6.  In the **Enrichments** section, choose **+Custom String** and enter the below key value pairs as shown below.
-    - Application: Industry-40
-    - DeviceName: Azure     
+    - Application: **Industry-40**
+    - DeviceName: **Azure**     
     <img src="./images/data-export05.jpg" width="90%" height="90%" />
 
 7. In the **Enrichments** section, choose **+Property** and enter the below key value pairs as shown below.
-    - ContainerID: Waste Container v2 / Container ID
-    - System: Device name
-    - DeviceTemplate: Device template name
-    - Location: Waste Container v2 / Location Id     
+    - ContainerID: **Waste Container v2 / Container ID**
+    - DeviceName: **Device name**
+    - DeviceTemplate: **Device template name**
+    - Location: **Waste Container v2 / Location Id**     
     <img src="./images/data-export06.jpg" width="90%" height="90%" />
 
 8. In the **Destinations** section, choose **+Destination** 

@@ -88,9 +88,9 @@ In this section, you will configure the different business actions that needs to
     "Vocabulary": [
         {
         "EventInfo": {
-            "SourceSystem": "${{event.data.enrichments.System}}",
-            "DeviceTemple": "${{event.data.enrichments.DeviceTemplate}}",
-            "DeviceLocation": "${{event.data.enrichments.Location}}"
+            "SourceSystem": "${{event.enrichments.System}}",
+            "DeviceType": "${{event.enrichments.DeviceTemplate}}",
+            "DeviceLocation": "${{event.enrichments.Location}}"
         }
         }
     ]
@@ -121,7 +121,7 @@ In this section, you will configure the different business actions that needs to
     > - Destination: **ACTION_AZURE_IOT**     
     > - Content-Type: **application/json**    
     > - Method: **PATCH**   
-    > - Relative Path: **${{event.data.deviceId}}/properties?api-version=2022-07-31**    
+    > - Relative Path: **${{event.deviceId}}/properties?api-version=2022-07-31**    
     > - Payload: 
 
     Your configuration should look like this:
@@ -155,7 +155,7 @@ In this section, you will configure the different business actions that needs to
     {
         "PurchaseRequisition": "",
         "PurchaseRequisitionType": "NB",
-        "PurReqnDescription": "Refill Container ${{event.data.enrichments.DeviceName}}",
+        "PurReqnDescription": "Refill Container ${{event.enrichments.DeviceName}}",
         "SourceDetermination": false,
         "PurReqnDoOnlyValidation": false,
         "to_PurchaseReqnItem": {
@@ -231,7 +231,7 @@ In this section, you will configure the different business actions that needs to
     ```json
     {
         "Status": "Under Maintenance",
-        "PRId": "${{main.<MainActionId>.d.results.PurchaseRequisition}}"
+        "PRId": "${{main.<MainActionId>.d.PurchaseRequisition}}"
     }
     ```   
 
