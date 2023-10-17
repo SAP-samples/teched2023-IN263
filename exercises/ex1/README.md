@@ -1,6 +1,6 @@
 ## Exercise 1 - Build and Deploy Events-to-Business-Actions Framework on SAP BTP 
 
-In this exercise, you will clone the codebase and deploy the Events-to-Business-Actions Framework on SAP BTP using SAP Business Application Studio. You can find the SAP BTP account and SAP Business Application Studio details here: [Systems and Credentials](../ex0/README.md/#4-systems-annd-credentials)
+In this exercise, you will clone the codebase and deploy the Events-to-Business-Actions Framework on SAP BTP using SAP Business Application Studio. You can find the SAP BTP account and SAP Business Application Studio details here: [Systems and Credentials](../ex0/README.md/#4-systems-and-credentials)
 
 ### 1. Discover Events-to-Business-Actions Framework
 
@@ -51,7 +51,7 @@ These are the technical prerequistics to deploy Events-to-Business-Actions Frame
 - **SAP Private Link Service** : To establishe a private connection between selected SAP BTP services and selected services in your own IaaS provider accounts.
 - **SAP Business Application Studio** : A powerful and modern development environment, tailored for efficient development of business applications for the Intelligent Enterprise.
 
-All required services have been added to the BTP account and the details are provided here: [Systems and Credentials](../ex0/README.md/#4-systems-annd-credentials)
+All required services have been added to the BTP account and the details are provided here: [Systems and Credentials](../ex0/README.md/#4-systems-and-credentials)
 
 ### 3. Deploy the Extension Application - Step by Step Solution Guide
 

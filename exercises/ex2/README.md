@@ -1,6 +1,6 @@
 ## Exercise 2 - Configure SAP Integration Suite, Advanced Event Mesh 
 
-In this exercise, you will create REST Delivery Point, Queue, Topic Subscriptions, REST Consumer etc in SAP Integration Suite, Advanced Event Mesh. You can find the SAP Integration Suite, Advanced Event Mesh details here: [Systems and Credentials](../ex0/README.md/#4-systems-annd-credentials)
+In this exercise, you will create REST Delivery Point, Queue, Topic Subscriptions, REST Consumer etc in SAP Integration Suite, Advanced Event Mesh. You can find the SAP Integration Suite, Advanced Event Mesh details here: [Systems and Credentials](../ex0/README.md/#4-systems-and-credentials)
 
 ### 1. Discover SAP Integration Suite, Advanced Event Mesh
 

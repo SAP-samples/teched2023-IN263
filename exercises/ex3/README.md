@@ -4,7 +4,7 @@ In this exercise, you will configure SAP Build Process Automation project where 
 
 ### 1. Create SAP Build Process Automation Project
 
-1. Open the [SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/) Application.
+1. Open the [SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/) Application and Login with credentials provided here: 
 
 2. In the SAP Build Process Automation Application, In the **Lobby** Tab , Click on **Create** button to create a new project.
 

@@ -1,54 +1,67 @@
 ## Exercise 5 - Configure Decision in Build Process Automation: Part 02
 
-In this exercise, you will update decision created in Exercise 3 - Configure Decision in SAP Build Process Automation: Part 01 with action id details and activate the project.
+In this exercise, you will update decision created in **Exercise 3 - Configure Decision in SAP Build Process Automation: Part 01** with action id details and activate the project.
 
 ### 1. Update Decision Table 
 
-1. In the SAP BTP Cockpit, Navigate to your subaccount -> **Sevices** -> **Instances and Subscriptions** , Open the SAP Build Process Automation Application.
+1. Open the [SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/) Application and Login with credentials provided here: [Systems and Credentials](../ex0//README.md/#4-systems-and-credentials)
 
-    ![plot](./images/subscriptions.png)
 
-2. In the SAP Build Process Automation Application, In the **Lobby** Tab , Click on **Events-to-Business-Actions-Framework** project.
+2. In the SAP Build Process Automation Application, In the **Lobby** Tab , Click on **Events-to-Business-Actions-Framework-XXX** project.
 
-    ![plot](./images/lobby.png)
+    <img src="./images/lobby.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/lobby.png) -->
 
-3. Choose the **E2BDecision** , On the **Rules** Tab, Click the **DecideAction** Decision table.
+3. Choose the **E2BDecision** which will open up the Decision created earlier.
 
-    ![plot](./images/E2BDecision.png)
+    <img src="./images/lobby1.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/lobby1.png) -->
 
-4. Click on the **ActionId** Field. 
+    On the **Rules** Tab, Click the **DecideAction** Decision table.
 
-    ![plot](./images/FillActionId.png)
+    <img src="./images/E2BDecision0.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/E2BDecision0.png) -->
 
-    Paste the ActionId of the Action Created in Step-7.  
+4. Click on the **ActionId** Field. Paste the ActionId within singlequote which was noted in Step 9 of Part 2 in Previous Exercise [Configure Business Actions in  Manage Actions application](../ex4/README.md/#2-configure-business-actions-in-manage-actions-application)
 
-    ![plot](./images/ActionId.png)
+    <img src="./images/FillActionId0.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/FillActionId0.png) -->
 
-5. The Decision is now configured with the Business Rule successfully. To use the decision in our CAP extension application we need to deploy all the latest changes in the Decision. 
+    Then Choose **Save**.
 
-    First click on **Release** to release the Decisions. 
+
+5. The Decision is now configured with the required rules successfully.
+
+    Click on **Release** to release the Decision. 
     
-    ![plot](./images/RuleCreated.png)
+    <img src="./images/RuleCreated0.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/RuleCreated0.png) -->
 
-    Click on **Release**
+    Provide **Version Comment** of your choice and then Choose **Release**
 
-    ![plot](./images/ProjectRelease.png)
+    <img src="./images/ProjectRelease0.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/ProjectRelease0.png) -->
 
 6. Now that the project is released, it is ready for deployment. Click on the **Deploy**
 
-    ![plot](./images/Deploy1.png)
+    <img src="./images/Deploy11.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/Deploy11.png) -->
 
     Follow the steps shown in the following screenshots.
 
-    ![plot](./images/Deploy2.png)
+    <img src="./images/Deploy21.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/Deploy21.png) -->
 
-    ![plot](./images/Deploy3.png)
+    <img src="./images/Deploy31.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/Deploy31.png) -->
 
-    ![plot](./images/Deploy4.png)
+    <img src="./images/Deploy41.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/Deploy41.png) -->
 
 7. The Project is successfully Redeployed ! 
 
-    ![plot](./images/Deployed.png)
+    <img src="./images/Deployed1.png" width="90%" height="90%" /> 
+    <!-- ![plot](./images/Deployed1.png) -->
 
 ### 3. Congratulations!
 

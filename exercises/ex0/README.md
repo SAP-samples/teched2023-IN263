@@ -68,7 +68,7 @@ In case SAP S/4HANA is on-premise and private cloud (refer to Figure-2)– commu
 -  ####  We have configured the API_PURCHASEREQ_PROCESS_SRV API in our SAP S/4HANA System to create Purchase Requisitions triggered by events from Azure IoT Central. The service is activated, and a corresponding destination has been established within our SAP BTP subaccount.
 
 
-### 4. **Systems annd Credentials**
+### 4. **Systems and Credentials**
 <details>
 
 | Systems | Credentials |
