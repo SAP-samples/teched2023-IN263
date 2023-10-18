@@ -4,51 +4,82 @@ Now that you have successfully deployed the extension application in SAP BTP and
 
 ### 1. Trigger Process by Enabling Data Export
 
-1. Log in to Microsoft Azure Portal and navigate to **Resource Group** and choose your Azure IOT Central Application. Choose **Data Export**. Select to enable data export and wait till status becomes healthy.
+1. Log in to [Microsoft Azure IoT Central](https://industry-40.azureiotcentral.com/). Choose **Data Export**. 
 
-    ![plot](./images/StartDataExport.png)
+    <img src="./images/1.png" width="90%" height="90%" />
+    <!-- ![plot](./images/1.png) -->
 
-2. Choose **Devices** and find your device and check the status. It should be in **Connected** state.
+2. Click on disabled toggle button to **Enable** the data export.
 
-    ![plot](./images/DeviceStatusWorking.png)
+    <img src="./images/2.png" width="90%" height="90%" />
 
-3. Log into SAP S/4HANA System and Search for **Manage Purchase Requisition** app.
+3. Upon enabling your screen will look as shown below. 
 
-    ![plot](./images/S4HANASearchApp.png)
+    <img src="./images/3.png" width="90%" height="90%" />
+    <!-- ![plot](./images/2.png) -->
 
-4. Choose **Go** and then choose the latest purchase requsition.
+<!-- 2. Choose **Devices** and find your device and check the status. It should be in **Connected** state.
 
-    ![plot](./images/PurchaseRequisitionList.png)
+    ![plot](./images/DeviceStatusWorking.png) -->
 
-5. In the **Purchase Requisition Items** table, verify if **Item** column is updated with Fill Level information.
+4. Log into [SAP S/4HANA System](https://s4hana.saptfe-demo.com:44300/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home) and Search for **Purchase Professional**. Choose **Manage Puchase Requisitions Professional** application.
 
-    ![plot](./images/PurchaseRequsitionWithFillLevel.png)
+    <img src="./images/4.png" width="90%" height="90%" />
+    <!-- ![plot](./images/S4HANASearchApp.png) -->
 
-6. Go to Microsoft Azure IOT Central Application and choose **Devices** to verify if the status is **Under Maintenance**.
+5. The **Manage Purchase Requisitions-Professional** application opens. Choose **Go** to list all the purchase requisitions created. 
 
-    ![plot](./images/DeviceStatusUnderMaintenance.png)
+    <img src="./images/5.png" width="90%" height="90%" />
+    <!-- ![plot](./images/PurchaseRequisitionList.png) -->
 
-7. Open **action-management** application in your cloud foundry space using BTP Cockpit. Click on the url provided under Application Routes section.
+6. Choose the latest purchase requsition.
 
-    ![plot](./images/ActionManagementApplication.png)
+    <img src="./images/6.png" width="90%" height="90%" />
+
+7. You can see that a **Purchase Requisition** was created for your device.
+
+    <img src="./images/7.png" width="90%" height="90%" />
+    <!-- ![plot](./images/PurchaseRequsitionWithFillLevel.png) -->
+
+8. Now go back to [Microsoft Azure IOT Central Application](https://industry-40.azureiotcentral.com/) and **Disable** the data export. Then navigate to **Devices**
+
+    <img src="./images/8.png" width="90%" height="90%" />
+    <!-- ![plot](./images/DeviceStatusUnderMaintenance.png) -->
+
+9. Choose your device to see if the **status** of your device was updated.
+
+    <img src="./images/9.png" width="90%" height="90%" />
+
+10. You can see that the **status** of your device is updated to **Under Maintenance**
+
+    <img src="./images/10.png" width="90%" height="90%" />
+
+
+    <!-- ![plot](./images/ActionManagementApplication.png) -->
 
 ### 2. Explore the Action Logs
 
-8. Click on **Business Action Logs** tile.
+1. Open **action-management** application in your cloud foundry space using BTP Cockpit. Click on the url provided under Application Routes section.
 
-    ![plot](./images/ActionManagementHome.png)
+    <img src="./images/10.5.png" width="90%" height="90%" />
 
-9. View Logs information and you can filter by date and status. 
+2. Click on **Business Action Logs** tile.
 
-    ![plot](./images/LogsListView.png)
+    <img src="./images/11.png" width="90%" height="90%" />
+    <!-- ![plot](./images/ActionManagementHome.png) -->
 
-10. Choose any entry from analytical table in Log Details Section. Click on **Re-Process** button to re-process the failed events.
+3. Choose **Go** to View Logs information, then choose the latest log entry.
 
-    ![plot](./images/LogsDetailView.png)
+    <img src="./images/12.png" width="90%" height="90%" />
+    <!-- ![plot](./images/LogsListView.png) -->
+
+4. You can see the detailed logs. It also shows the **Log status** as **COMPLETE** upon successful creation of **Purchase Requisition** in the SAP S/4HANA System.
+
+    <img src="./images/13.png" width="90%" height="90%" />
+    <!-- ![plot](./images/LogsDetailView.png) -->
 
 
 ### 3. Congratulations!
 
-Congratulations on completing your Exercise 7! You have successfully updated completed the end-to-end integration of events to business actions from Microsoft Azure to SAP S/4HANA with SAP BTP.
-
+Congratulations on completing your Exercise 7! You have successfully completed the end-to-end integration of events to business actions from Microsoft Azure IoT Central to SAP S/4HANA with SAP BTP.
 
