@@ -4,7 +4,7 @@ In this exercise, you will configure SAP Build Process Automation project where 
 
 ### 1. Create SAP Build Process Automation Project
 
-1. Open the [SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/) Application and Login with credentials provided here: 
+1. Open the [SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/) Application and Login with credentials provided here: [Credentials](../ex0/README.md/#4-systems-and-credentials)
 
 2. In the SAP Build Process Automation Application, In the **Lobby** Tab , Click on **Create** button to create a new project.
 
@@ -107,7 +107,7 @@ In this exercise, you will configure SAP Build Process Automation project where 
     <img src="./images/addIpOp.png" width="90%" height="100%" />
     <!-- ![plot](./images/addIpOp.png) -->
 
-5. Next let us configure the **Rules**. 
+5. Next navigate to **Rule** Tab to configure the **Rules**. 
 
     a. Click on **Add Rule**
 
@@ -145,7 +145,7 @@ In this exercise, you will configure SAP Build Process Automation project where 
     >- DeviceType: **='Waste Container v2**',
     >- DeviceLocation: **='Plant A'**
 
-    ActionId to be filled later.
+    ActionId to be filled later. **Save** the Decision.
 
     <img src="./images/RuleField.png" width="90%" height="100%" />
     <!-- ![plot](./images/RuleField.png) -->

@@ -12,7 +12,8 @@ In this exercise, you will update decision created in **Exercise 3 - Configure D
     <img src="./images/lobby.png" width="90%" height="90%" /> 
     <!-- ![plot](./images/lobby.png) -->
 
-3. Choose the **E2BDecision** which will open up the Decision created earlier.
+3. Choose the **E2BDecision** which will open up the Decision created earlier.   
+**Note:** Make sure the project is in **Editable** Mode.
 
     <img src="./images/lobby1.png" width="90%" height="90%" /> 
     <!-- ![plot](./images/lobby1.png) -->

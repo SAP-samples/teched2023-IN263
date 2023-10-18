@@ -24,7 +24,7 @@ The framework is developed using SAP Cloud Application Programming (CAP) Model a
         <img src="./images/actionslogicflow.png" width="75%" height="90%" />  
 
 2. **Processor**
-    - Processor is the backend module that receives the from SAP Inetrgation Suite, Advanced Event Mesh topic and executes the corresponding business actions in the SAP S/4HANA system.
+    - Processor is the backend module that receives the event from SAP Integration Suite, Advanced Event Mesh topic and executes the corresponding business actions in the SAP S/4HANA system.
     - The processor executes the following steps once it receives an event:
         - Processes ‘Default Action’ to determine which business actions (Main Action) needs to be processed.
         - Fetches the respective business action definition and the associated pre/post actions.
@@ -35,11 +35,9 @@ The framework is developed using SAP Cloud Application Programming (CAP) Model a
     - Monitor application is used to monitor the status of the business actions and check the logs for troubleshooting.
     - You can drill down to the individual action execution to find out the respective logs and can be used for troubleshooting any failed execution.
 
-For more details about the framework, you can refer the blog here: [Explore “Events-To-Business Actions” Framework](https://blogs.sap.com/2023/02/01/part-2-explore-events-to-business-actions-framework/)
-
 ### 2. Required SAP BTP Services
 
-These are the technical prerequistics to deploy Events-to-Business-Actions Framework on SAP BTP.
+These are the technical prerequisites to deploy Events-to-Business-Actions Framework on SAP BTP.
 - **Cloud Foundry Runtime** : Required for deploying and running the extension application in SAP BTP.
 - **Authorization & Trust Management Service** : Required for securing the extension application in SAP BTP.
 - **SAP Integration Suite,Advanced Event Mesh** : Required to receive events from Microsoft Azure IoT Central.
@@ -75,7 +73,7 @@ All required services have been added to the BTP account and the details are pro
     <!-- ![plot](./images/BAS_3.png) -->
 
     
-3. Click on **Clone from Git** and provide url: **https://github.com/SAP-samples/teched2023-IN263.git**. 
+3. Click on **Clone from Git** and provide url: **https://github.com/SAP-samples/teched2023-IN263.git** 
 
     <img src="./images/BAS_4.png" width="90%" height="90%" />
     <!-- ![plot](./images/BAS_4.png) -->

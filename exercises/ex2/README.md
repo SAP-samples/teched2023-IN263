@@ -130,7 +130,7 @@ In this exercise, you will create REST Delivery Point, Queue, Topic Subscription
     <img src="./images/aem-22.png" width="90%" height="90%" />
      <!-- ![plot](./images/aem-22.png) -->
 
-7. Set the POST reuqest target to **/api/events**. This is the end point to which events will be forwarded which is nothing but extension application of Events-to-Business-Actions framework.
+7. Set the POST request target to **/api/events** This is the end point to which events will be forwarded which is nothing but extension application of Events-to-Business-Actions framework.
     Then Choose **Apply**
 
     <img src="./images/aem-23.png" width="90%" height="90%" />
@@ -169,13 +169,25 @@ In this exercise, you will create REST Delivery Point, Queue, Topic Subscription
     Then paste it in HOST field on Edit REST Consumer configuration page.
 
 11. Fill in the following Value
-    - **Port** as **443**
-    - Select **POST** as the **HTTP Method**.
-    - Enable the TLS.
-    - Keep **Outgoing Connection Count** value as **1**.
-    - Fill the **Max Response Wait Time (sec)** as **30**
-    - Populate **Connection Retry Delay (sec)** field with **300**
-    - Choose **OAuth 2.0 Client Credentials** as the **Authentication Scheme**.
+
+    | Field | Value |
+    |------|------|
+    | Enabled  | Enable toggle |
+    | Port | 443 |
+    | HTTP Method |  POST |
+    | TLS | Enable toggle |
+    | Outgoing Connection Count | 1 |
+    | Max Response Wait Time (sec) | 30 |
+    | Connection Retry Delay (sec) | 300 |
+    | Authentication Scheme | OAuth 2.0 Client Credentials |
+    | Client Id | <clientid>|
+    | Client Secret | <clientsecret>|
+    | Token Endpoint URL | <url>/oauth/token |
+    | Token Exipry Default |900 |
+    | Scope | uaa.resource |
+
+    Follow the steps below to fetch the value of Client Id, Client Secret and Token Endpoint URL
+
 
 12. Go back to the [SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22) 
     and then to Cloud Foundary Space. Navigate to **Services** > **Instances** and under the **Instances** select **action-management-auth**. 

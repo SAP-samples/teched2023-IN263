@@ -83,3 +83,11 @@ Now that you have successfully deployed the extension application in SAP BTP and
 
 Congratulations on completing your Exercise 7! You have successfully completed the end-to-end integration of events to business actions from Microsoft Azure IoT Central to SAP S/4HANA with SAP BTP.
 
+#### For Additional Information on this use case you can refer following resources:
+
+- Use Case: [Build Events-to-Business Actions Scenarios with SAP BTP and Microsoft Azure/AWS](https://github.com/SAP-samples/btp-events-to-business-actions-framework)
+- DC mission: [Build Events-to-Business Actions Apps with SAP BTP and MS Azure/AWS](https://discovery-center.cloud.sap/missiondetail/4172/4422/)
+- 5 Part Blog Series: [“Events-to-Business Actions”: An event-driven architecture on SAP BTP to implement Industry 4.0 scenarios with Microsoft Azure Services](https://blogs.sap.com/2023/01/27/part-1-events-to-business-actions-architecture-an-event-driven-framework-on-sap-btp-to-implement-industry-4.0-scenarios-with-microsoft-azure-services/)
+- [Set Up Connectivity Between SAP BTP and SAP S/4HANA Using Cloud Connector](https://github.com/SAP-samples/btp-events-to-business-actions-framework/tree/main/documentation/Integration-With-Azure-IoT/Scenario1-Inbound-to-SAPS4HANA/Step4a-SetupCloudConnector)
+- [Set Up Connectivity Between SAP BTP and SAP S/4HANA Using SAP Private Link Service](https://github.com/SAP-samples/btp-events-to-business-actions-framework/blob/main/documentation/Integration-With-Azure-IoT/Scenario1-Inbound-to-SAPS4HANA/Step4b-Setup-SAPPrivateLinkService/README.md)
+
