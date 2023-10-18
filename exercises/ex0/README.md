@@ -75,7 +75,7 @@ In case SAP S/4HANA is on-premise and private cloud (refer to Figure-2)– commu
 |---------|-------------|
 | **[SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22)** | **Email:** IN263-XXX@education.cloud.sap <br> **Password:** Acce$$teched23 <br> _replace XXX with the number on your laptop_ |
 | **[SAP Business Application Studio](https://in263-ol7jr9xc.eu10cf.applicationstudio.cloud.sap/index.html)**| **Email:** IN263-XXX@education.cloud.sap <br> **Password:** Acce$$teched23 <br> _replace XXX with the number on your laptop_ |
-| **[SAP Integration Suite, Advanced Event Mesh](https://eu10.console.pubsub.em.services.cloud.sap/login?tenant-id=0e652f06-6ee7-48d1-8877-b84274456b22)** | **Email:** IN263-XXX@teched2023outlook.onmicrosoft.com <br> **Password:** Acce$$teched23 <br> _replace XXX with the number on your laptop_ |
+| **[SAP Integration Suite, Advanced Event Mesh](https://eu10.console.pubsub.em.services.cloud.sap/login?tenant-id=0e652f06-6ee7-48d1-8877-b84274456b22)** | **Email:** IN263-XXX@education.cloud.sap <br> **Password:** Acce$$teched23 <br> _replace XXX with the number on your laptop_ |
 | **[SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/)** | **Email:** IN263-XXX@education.cloud.sap <br> **Password:** Acce$$teched23 <br> _replace XXX with the number on your laptop_ |
 | **[Microsoft Azure IoT Central](https://industry-40.azureiotcentral.com/)** | **Email:** IN263-XXX@teched2023outlook.onmicrosoft.com <br> **Password:** Acce$$teched23 <br> _replace XXX with the number on your laptop_ |
 </details>
