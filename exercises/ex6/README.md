@@ -18,12 +18,24 @@ In this exeercis, your objective is to generate a Device Template and a simulate
     <img src="./images/newdevice00.jpg" width="90%" height="90%" />
     <!-- ![plot](./images/newdevice.png) -->
 
-2. A **Device Template** is already created. In the **Device Template** dropdown menu, choose the device template named **Waste Container v2** and then choose **Create**.
+2. Fill the **Device name** as WC IN263-XXX , where XXX is the id in your email id. **Device ID** is auto-populated. In the **Device Template** dropdown menu, choose the device template named **Waste Container v2**. Set the **Simulate this device** toggle to **yes**  and then choose **Create**.
 
     <img src="./images/newdevice01.jpg" width="90%" height="90%" />
+
+3. Once your device is created, Under the **Form** tab, configure the following values:
+```
+Container ID: Container-IN263-XXX
+Location Id: Plant A
+Status: Working
+```
+Your configuration should like as shown below, and then **Save**
+
     <img src="./images/newdevice02.jpg" width="90%" height="90%" />
+
+4. As we have enabled simulation, the device now simulates real-time IoT device events, you can see the generated events under **Raw Data** tab.
+5. 
     <img src="./images/newdevice03.jpg" width="90%" height="90%" />
-    <!-- ![plot](./images/newdevice1.png) -->
+
 
 
 ### 4. Configure Data Export
@@ -37,9 +49,11 @@ During this step, you'll initially establish a Destination, outlining the connec
 2. Enter following values:
     - **Name: DEST-AEM-IN263-XXX** where XXX is the id from your email id.
     - **Destination type: Webhook**
-    - **Callback URL: https://{Username}:{Password}@{Secured Rest HOST}/{Topic Subscription}** where Username, Password, Secured Rest HOST, Topic Subscription are noted in exercise 2.     
-    <img src="./images/data-export01.jpg" width="90%" height="90%" />     
-    Then choose **Save**.
+    - **Callback URL: https://{Username}:{Password}@{Secured Rest HOST}/{Topic Subscription}** where Username, Password, Secured Rest HOST, Topic Subscription are noted in exercise 2. **Note:** remove the https:// from the Secured Rest HOST before pasting. Then choose **Save**.
+
+    <img src="./images/data-export01.jpg" width="90%" height="90%" />
+       
+
 
 3. Choose **Data export** and then choose **+ New Data Export** to create new Data export.
 
@@ -51,7 +65,7 @@ During this step, you'll initially establish a Destination, outlining the connec
 
     <img src="./images/data-export03.jpg" width="90%" height="90%" />
 
-5. In the **Export the data if** dropdown menu, select **all of the conditions are true**. Add following filters as shown in following image:
+6. In the **Export the data if** dropdown menu, select **all of the conditions are true**. Add following filters as shown in following image:
     - Device Template = **Waste Container v2**
     - Filling Level **LT 30**
     - Waste Container / Status = **Working**  
@@ -60,19 +74,19 @@ During this step, you'll initially establish a Destination, outlining the connec
 
     <!-- ![plot](./images/dataexport-new.png) -->
 
-6.  In the **Enrichments** section, choose **+Custom String** and enter the below key value pairs as shown below.
+7.  In the **Enrichments** section, choose **+Custom String** and enter the below key value pairs as shown below.
     - Application: **Industry-40**
-    - DeviceName: **Azure**     
+    - System: **Azure**     
     <img src="./images/data-export05.jpg" width="90%" height="90%" />
 
-7. In the **Enrichments** section, choose **+Property** and enter the below key value pairs as shown below.
+8. In the **Enrichments** section, choose **+Property** and enter the below key value pairs as shown below.
     - ContainerID: **Waste Container v2 / Container ID**
     - DeviceName: **Device name**
     - DeviceTemplate: **Device template name**
     - Location: **Waste Container v2 / Location Id**     
     <img src="./images/data-export06.jpg" width="90%" height="90%" />
 
-8. In the **Destinations** section, choose **+Destination** 
+9. In the **Destinations** section, choose **+Destination** 
 
     <img src="./images/data-export07.jpg" width="90%" height="90%" />       
 
