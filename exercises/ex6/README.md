@@ -66,10 +66,11 @@ During this step, you'll initially establish a Destination, outlining the connec
     <img src="./images/data-export03.jpg" width="90%" height="90%" />
 
 6. In the **Export the data if** dropdown menu, select **all of the conditions are true**. Add following filters as shown in following image:
-    - Device Template = **Waste Container v2**
-    - Filling Level **LT 30**
-    - Waste Container / Status = **Working**  
-    - Device name = **WC-IN263-XXX**, replace XXX with the id from your email (device name that you created in step 2 of Part 4)
+    - **Name:** Device Template **Operator:**:Equals **Value:** Waste Container v2
+    - **Name:** Filling Level **Operator:** is less than **Value**: 30
+    - **Name:** Waste Container / Status **Operator:** Equals **Value**: Working  
+    - **Name:** Device name **Operator:** Equals **Value**: WC-IN263-XXX, replace XXX with the id from your email (device name that you created in step 2 of Part 4)
+   
     <img src="./images/data-export04.jpg" width="90%" height="90%" />
 
     <!-- ![plot](./images/dataexport-new.png) -->
