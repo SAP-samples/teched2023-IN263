@@ -23,12 +23,12 @@ In this exeercis, your objective is to generate a Device Template and a simulate
     <img src="./images/newdevice01.jpg" width="90%" height="90%" />
 
 3. Once your device is created, Under the **Form** tab, configure the following values:
-```
-Container ID: Container-IN263-XXX
-Location Id: Plant A
-Status: Working
-```
-Your configuration should like as shown below, and then **Save**
+    ```
+    Container ID: Container-IN263-XXX
+    Location Id: Plant A
+    Status: Working
+    ```
+    Your configuration should like as shown below, and then **Save**
 
     <img src="./images/newdevice02.jpg" width="90%" height="90%" />
 
