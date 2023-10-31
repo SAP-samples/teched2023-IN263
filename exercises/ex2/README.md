@@ -120,7 +120,7 @@ In this exercise, you will create REST Delivery Point, Queue, Topic Subscription
     <img src="./images/aem-20.png" width="90%" height="90%" />
     <!-- ![plot](./images/aem-20.png) -->
 
-6. Choose the queue created reviously from the drop down - **Q-IN263-XXX** where XXX is the id from your email id
+6. Choose the queue created previously from the drop down - **Q-IN263-XXX** where XXX is the id from your email id
 
     <img src="./images/aem-21.png" width="90%" height="90%" />
     <!-- ![plot](./images/aem-21.png) -->
@@ -182,7 +182,7 @@ In this exercise, you will create REST Delivery Point, Queue, Topic Subscription
     | Authentication Scheme | OAuth 2.0 Client Credentials |
     | Client Id | <clientid>|
     | Client Secret | <clientsecret>|
-    | Token Endpoint URL | <url>/oauth/token |
+    | Token Endpoint URL | `url`/oauth/token |
     | Token Exipry Default |900 |
     | Scope | uaa.resource |
 
