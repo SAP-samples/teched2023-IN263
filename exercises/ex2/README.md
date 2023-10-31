@@ -180,8 +180,8 @@ In this exercise, you will create REST Delivery Point, Queue, Topic Subscription
     | Max Response Wait Time (sec) | 30 |
     | Connection Retry Delay (sec) | 300 |
     | Authentication Scheme | OAuth 2.0 Client Credentials |
-    | Client Id | <clientid>|
-    | Client Secret | <clientsecret>|
+    | Client Id | `clientid`|
+    | Client Secret | `clientsecret`|
     | Token Endpoint URL | `url`/oauth/token |
     | Token Exipry Default |900 |
     | Scope | uaa.resource |
