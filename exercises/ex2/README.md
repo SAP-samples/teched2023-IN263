@@ -28,49 +28,41 @@ In this exercise, you will create REST Delivery Point, Queue, Topic Subscription
     <img src="./images/aem-2.png" width="90%" height="90%" />       
     <!-- ![plot](./images/aem-2.png) -->
 
-### 3. Configure a Queue and Topic subscription
+### 3. Configure Topic subscription
 
 1. Click on **Open Broker Manager**.
 
     <img src="./images/open-broker-manager.png" width="90%" height="90%" /> 
     <!-- ![plot](./images/open-broker-manager.png) -->
 
-2. The **Broker Manager** application loads. The next step is to create a queue, on the left pane click on **Queues**  
+2. The **Broker Manager** application loads. The next step is to create a topic subscription for the queue, on the left pane click on **Queues**  
 
     <img src="./images/aem-4.png" width="90%" height="90%" /> 
     <!-- ![plot](./images/aem-4.png) -->
 
-3. You will see the following screen, Click on **+ Queue** to create a new queue.
-
+3. You will see the following screen, the queues are already created. Search the queue **Q-IN263-XXX** where XXX is the id from your email id.
+   
     <img src="./images/aem-5.png" width="90%" height="90%" /> 
     <!-- ![plot](./images/aem-5.png) -->
 
-4. Provide name as **Q-IN263-XXX** where XXX is the id from your email id.
 
-    <img src="./images/aem-6.png" width="90%" height="90%" /> 
-    <!-- ![plot](./images/aem-6.png) -->
 
-5. Enable both incoming and outgoing configuration and Click on **Apply**
-
-    <img src="./images/aem-7.png" width="90%" height="90%" /> 
-    <!-- ![plot](./images/aem-7.png)     -->
-
-6. Queue successfully created, now Click on the Queue. 
+7. Now Click on the Queue. 
 
     <img src="./images/aem-8.png" width="90%" height="90%" /> 
     <!-- ![plot](./images/aem-8.png)     -->
 
-7. Add a **Topic Subscription** to the queue. Click on the **Subscriptions** Tab.
+8. Add a **Topic Subscription** to the queue. Click on the **Subscriptions** Tab.
 
     <img src="./images/aem-9.png" width="90%" height="90%" /> 
     <!-- ![plot](./images/aem-9.png) -->
 
-8. Then click on **+ Subscription** to add a topic.
+9. Then click on **+ Subscription** to add a topic.
 
     <img src="./images/aem-10.png" width="90%" height="90%" /> 
     <!-- ![plot](./images/aem-10.png) -->
 
-9. In the **Create Subscription** screen, type in the topic name as **IN263-XXX/messages** where XXX is the id from your email id and click **Create**
+10. In the **Create Subscription** screen, type in the topic name as **IN263-XXX/messages** where XXX is the id from your email id and click **Create**
 
     <img src="./images/aem-11.png" width="90%" height="90%" />
     <!-- ![plot](./images/aem-11.png)     -->
@@ -80,37 +72,20 @@ In this exercise, you will create REST Delivery Point, Queue, Topic Subscription
     <img src="./images/aem-12.png" width="90%" height="90%" />
     <!-- ![plot](./images/aem-12.png)    -->
 
-### 4. Configure a REST Delivery Point and Queue Binding.
+### 4. Configure Queue Binding.
 
 1. On the left pane click on **Clients** and then Navigate to **REST** tab.
     
     <img src="./images/aem-14.png" width="90%" height="90%" />
     <!-- ![plot](./images/aem-14.png) -->
 
-2. Click on **+ REST Delivery Point** 
+2. **REST Delivery Point** are already created. Search for the RDP named **IN263-RDP-XXX** where XXX is the id from your email id.
 
     <img src="./images/aem-15.png" width="90%" height="90%" />
     <!-- ![plot](./images/aem-15.png) -->
 
-3. Fill the **RDP Name** as **IN263-RDP-XXX** where XXX is the id from your email id
-    
-    <img src="./images/aem-16.png" width="90%" height="90%" />
-    <!-- ![plot](./images/aem-16.png) -->
-    
-    Select **Enabled** and Click on **Apply**
-
-    <img src="./images/aem-17.png" width="90%" height="90%" />
-    <!-- ![plot](./images/aem-17.png)   -->
-
-    REST Delivery Point successfully created
-     
-    <img src="./images/aem-18.png" width="90%" height="90%" />
-    <!-- ![plot](./images/aem-18.png)   -->
-
-4. Create a Queue Binding to the queue you created previously. This indicates the RDP where to fetch messages from.     
-    **Note:** that REST Delivery Points (RDPs) can be bound to multiple queues.
-
-    Click on the REST Delivery Point **IN263-RDP-XXX** created in the previous step. Navigate to **Queue Bindings** Tab.
+4. Create a Queue Binding to your queue. This indicates the RDP where to fetch messages from.    
+    Click on the REST Delivery Point **IN263-RDP-XXX** . Navigate to **Queue Bindings** Tab.
 
     <img src="./images/aem-19.png" width="90%" height="90%" />
     <!-- ![plot](./images/aem-19.png) -->
