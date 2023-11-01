@@ -1,11 +1,6 @@
 ## Exercise 1 - Build and Deploy Events-to-Business-Actions Framework on SAP BTP 
 
-In this exercise, you will clone the codebase and deploy the Events-to-Business-Actions Framework on SAP BTP using SAP Business Application Studio. You can find the [SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22) and [SAP Business Application Studio](https://in263-ol7jr9xc.eu10cf.applicationstudio.cloud.sap/index.html) details here: 
-
-| Systems | Credentials |
-|---------|-------------|
-| **[SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22)** | **Email:** IN263-XXX@education.cloud.sap <br> _replace XXX with the number on your laptop_ |
-| **[SAP Business Application Studio](https://in263-ol7jr9xc.eu10cf.applicationstudio.cloud.sap/index.html)**| **Email:** IN263-XXX@education.cloud.sap <br> _replace XXX with the number on your laptop_ |
+In this exercise, you will clone the codebase and deploy the Events-to-Business-Actions Framework on SAP BTP using SAP Business Application Studio. You can find the [SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22) and [SAP Business Application Studio](https://in263-ol7jr9xc.eu10cf.applicationstudio.cloud.sap/index.html) details below.
 
 ### 1. Discover Events-to-Business-Actions Framework
 
@@ -54,7 +49,12 @@ These are the technical prerequisites to deploy Events-to-Business-Actions Frame
 - **SAP Private Link Service** : To establishe a private connection between selected SAP BTP services and selected services in your own IaaS provider accounts.
 - **SAP Business Application Studio** : A powerful and modern development environment, tailored for efficient development of business applications for the Intelligent Enterprise.
 
-All required services have been added to the BTP account and the details are provided here: [Systems and Credentials](../ex0/README.md/#4-systems-and-credentials)
+All required services have been added to the BTP Subaccount and the details are provided here: 
+
+| Systems | Credentials |
+|---------|-------------|
+| **[SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22)** | **Email:** IN263-XXX@education.cloud.sap <br> _replace XXX with the number on your laptop_ |
+| **[SAP Business Application Studio](https://in263-ol7jr9xc.eu10cf.applicationstudio.cloud.sap/index.html)**| **Email:** IN263-XXX@education.cloud.sap <br> _replace XXX with the number on your laptop_ |
 
 ### 3. Deploy the Extension Application - Step by Step Solution Guide
 
