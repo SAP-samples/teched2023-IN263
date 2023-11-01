@@ -45,8 +45,6 @@ In this exercise, you will create REST Delivery Point, Queue, Topic Subscription
     <img src="./images/aem-5.png" width="90%" height="90%" /> 
     <!-- ![plot](./images/aem-5.png) -->
 
-
-
 7. Now Click on the Queue. 
 
     <img src="./images/aem-8.png" width="90%" height="90%" /> 
@@ -79,7 +77,7 @@ In this exercise, you will create REST Delivery Point, Queue, Topic Subscription
     <img src="./images/aem-14.png" width="90%" height="90%" />
     <!-- ![plot](./images/aem-14.png) -->
 
-2. **REST Delivery Point** are already created. Search for the RDP named **IN263-RDP-XXX** where XXX is the id from your email id.
+2. **REST Delivery Point** are already created. Search for the RDP named **IN263-RDP-XXX** where XXX is the id from your email id. **Note:** select Show 100 to view all the RDPs.
 
     <img src="./images/aem-15.png" width="90%" height="90%" />
     <!-- ![plot](./images/aem-15.png) -->
