@@ -8,8 +8,11 @@ In this exercise, your objective is to generate a Device Template and a simulate
 
 ### 2. Setting up Microsoft Azure IoT Central
 
-- We've configured a [Microsoft Azure IoT Central](https://industry-40.azureiotcentral.com/)application within our Azure subscription. You can access the application by logging in with the provided credentials here: [Systems and Credentials](../ex0/README.md/#4-systems-and-credentials)
-- If you're interested in setting it up or trying it out within your own Microsoft Azure subscription, you can refer to the instructions provided on this page for detailed steps: [Set Up Microsoft Azure IoT Central](./SetUp_Azure_IoT.md)
+- We've configured a [Microsoft Azure IoT Central](https://industry-40.azureiotcentral.com/)application within our Azure subscription. You can access the application by logging in with the provided credentials here:
+
+| Systems | Credentials |
+|---------|-------------|
+| **[Microsoft Azure IoT Central](https://industry-40.azureiotcentral.com/)** | **Email:** IN263-XXX@teched2023outlook.onmicrosoft.com <br> _replace XXX with the number on your laptop_ |
 
 ### 3. Create a new Device of template "Waste Container v2"
 
