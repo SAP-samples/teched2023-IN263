@@ -4,8 +4,11 @@ In this exercise, you will update decision created in **Exercise 3 - Configure D
 
 ### 1. Update Decision Table 
 
-1. Open the [SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/) Application and Login with credentials provided here: [Systems and Credentials](../ex0//README.md/#4-systems-and-credentials)
+1. Open the [SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/) Application and Login with credentials provided here:
 
+| Systems | Credentials |
+|---------|-------------|
+| **[SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/)** | **Email:** IN263-XXX@education.cloud.sap <br> _replace XXX with the number on your laptop_ |
 
 2. In the SAP Build Process Automation Application, In the **Lobby** Tab , Click on **Events-to-Business-Actions-XXX** project.
 
