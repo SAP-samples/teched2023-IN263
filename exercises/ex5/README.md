@@ -6,14 +6,15 @@ In this exercise, you will update decision created in **Exercise 3 - Configure D
 
 1. Open the [SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/) Application and Login with credentials provided here:
 
-| Systems | Credentials |
-|---------|-------------|
-| **[SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/)** | **Email:** IN263-XXX@education.cloud.sap <br> _replace XXX with the number on your laptop_ |
+    | Systems | Credentials |
+    |---------|-------------|
+    | **[SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/)** | **Email:** IN263-XXX@education.cloud.sap <br> _replace XXX with the number on your laptop_ |
 
-2. In the SAP Build Process Automation Application, In the **Lobby** Tab , Click on **Events-to-Business-Actions-XXX** project.
+2. In the SAP Build Process Automation Application, Open the **Lobby** Tab , **Search** project using the number assigned to you. Click on the project Events-to-Business-Actions-xxx where xxx is the number.
 
-    <img src="./images/lobby.png" width="90%" height="90%" /> 
-    <!-- ![plot](./images/lobby.png) -->
+    Note that, this number will also be part of your email id as well.
+
+    <img src="./images/SBPA_Search00.png" width="90%" height="100%" />
 
 3. Choose the **E2BDecision** which will open up the Decision created earlier.   
 **Note:** Make sure the project is in **Editable** Mode.

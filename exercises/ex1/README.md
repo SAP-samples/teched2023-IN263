@@ -1,6 +1,6 @@
 ## Exercise 1 - Build and Deploy Events-to-Business-Actions Framework on SAP BTP 
 
-In this exercise, you will clone the codebase and deploy the Events-to-Business-Actions Framework on SAP BTP using SAP Business Application Studio. You can find the [SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22) and [SAP Business Application Studio](https://in263-ol7jr9xc.eu10cf.applicationstudio.cloud.sap/index.html) details below.
+In this exercise, you will clone the codebase and deploy the Events-to-Business-Actions Framework on SAP BTP using SAP Business Application Studio. 
 
 ### 1. Discover Events-to-Business-Actions Framework
 
@@ -14,8 +14,8 @@ In this exercise, you will clone the codebase and deploy the Events-to-Business-
 
 The framework is developed using SAP Cloud Application Programming (CAP) Model and Node.js. It has primarily 3 components.
 1. **Modeler**
-    - Using the Modeler UI, you can configure the business actions that need to be triggered in the Business systems (Ex: Creation of Purchase Order Requisition in SAP S/4HANA, Service Ticket in SAP Service Cloud etc.) based on the incoming event. Modeler UI is built using SAP Fiori elements and provides the following tiles to configure action types, actions, and monitor the business action execution logs.
-    - “Manage action” tile can be used to configure the business actions. It is integrated with SAP Destination Service so that you can select the required destination configured for SAP business system to add the endpoint and the payload that is needed to create the business action.
+    - Using the Modeler UI, you can configure the business actions that need to be triggered in the Business systems (Ex: Creation of Purchase Order Requisition in SAP S/4HANA, Service Ticket in SAP Service Cloud etc.) based on the incoming event. 
+    - “Manage action” tile can be used to configure the business actions. It is integrated with SAP Destination Service so that you can select the required destination configured on BTP that is needed to create the business action.
     - The modeler supports defining and chaining actions based on the context flow as depicted in below figure .
         - “Default action” is used by the processor to determine which main action needs to be triggered for an incoming event. Only one default action can be defined in modeler.
         - “Main action” is the action that can be used to create a transaction in the business system (Purchase Order Requisition, Service Tickets etc.).
@@ -35,9 +35,9 @@ The framework is developed using SAP Cloud Application Programming (CAP) Model a
     - Monitor application is used to monitor the status of the business actions and check the logs for troubleshooting.
     - You can drill down to the individual action execution to find out the respective logs and can be used for troubleshooting any failed execution.
 
-### 2. Required SAP BTP Services
+### 2. SAP BTP Account Details
 
-These are the technical prerequisites to deploy Events-to-Business-Actions Framework on SAP BTP.
+<!-- These are the technical prerequisites to deploy Events-to-Business-Actions Framework on SAP BTP.
 - **Cloud Foundry Runtime** : Required for deploying and running the extension application in SAP BTP.
 - **Authorization & Trust Management Service** : Required for securing the extension application in SAP BTP.
 - **SAP Integration Suite,Advanced Event Mesh** : Required to receive events from Microsoft Azure IoT Central.
@@ -47,9 +47,9 @@ These are the technical prerequisites to deploy Events-to-Business-Actions Frame
 - **SAP Connectivity Service** : To establish connections between cloud applications and on-premise systems.
 - **SAP Destination Service** : To find the destination information required to access a remote service or system from your extension application
 - **SAP Private Link Service** : To establishe a private connection between selected SAP BTP services and selected services in your own IaaS provider accounts.
-- **SAP Business Application Studio** : A powerful and modern development environment, tailored for efficient development of business applications for the Intelligent Enterprise.
+- **SAP Business Application Studio** : A powerful and modern development environment, tailored for efficient development of business applications for the Intelligent Enterprise. -->
 
-All required services have been added to the BTP Subaccount and the details are provided here: 
+All required services have been added to the BTP Subaccount and You can find the [SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=tdct3ched1.accounts.ondemand.com#/globalaccount/e2a835b0-3011-4c79-818a-d7767c4627cd/subaccount/0e652f06-6ee7-48d1-8877-b84274456b22) and [SAP Business Application Studio](https://in263-ol7jr9xc.eu10cf.applicationstudio.cloud.sap/index.html) details below: 
 
 | Systems | Credentials |
 |---------|-------------|

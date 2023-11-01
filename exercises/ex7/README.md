@@ -4,7 +4,7 @@ Now that you have successfully deployed the extension application in SAP BTP and
 
 ### 1. Trigger Process by Enabling Data Export
 
-1. Log in to [Microsoft Azure IoT Central](https://industry-40.azureiotcentral.com/). Choose **Data Export**. 
+1. Open [Microsoft Azure IoT Central](https://industry-40.azureiotcentral.com/). Choose **Data Export**. 
 
     <img src="./images/1.png" width="90%" height="90%" />
     <!-- ![plot](./images/1.png) -->
@@ -13,7 +13,7 @@ Now that you have successfully deployed the extension application in SAP BTP and
 
     <img src="./images/2.png" width="90%" height="90%" />
 
-3. Upon enabling your screen will look as shown below. 
+3. Upon enabling your screen will look as shown below. This might take couple of minutes to send an event. You can wait for 3-5 minutes.
 
     <img src="./images/3.png" width="90%" height="90%" />
     <!-- ![plot](./images/2.png) -->
@@ -23,6 +23,10 @@ Now that you have successfully deployed the extension application in SAP BTP and
     ![plot](./images/DeviceStatusWorking.png) -->
 
 4. Log into [SAP S/4HANA System](https://s4hana.saptfe-demo.com:44300/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home) and Search for **Purchase Professional**. Choose **Manage Puchase Requisitions Professional** application.
+
+    | Systems | Credentials |
+    |---------|-------------|
+    | **[SAP S/4HANA System](https://s4hana.saptfe-demo.com:44300/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home)** | **Username:** S4H_PUR_DEM |
 
     <img src="./images/4.png" width="90%" height="90%" />
     <!-- ![plot](./images/S4HANASearchApp.png) -->

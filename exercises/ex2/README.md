@@ -1,15 +1,19 @@
 ## Exercise 2 - Configure SAP Integration Suite, Advanced Event Mesh 
 
-In this exercise, you will create REST Delivery Point, Queue, Topic Subscriptions, REST Consumer etc in SAP Integration Suite, Advanced Event Mesh. You can find the [SAP Integration Suite, Advanced Event Mesh](https://eu10.console.pubsub.em.services.cloud.sap/login?tenant-id=0e652f06-6ee7-48d1-8877-b84274456b22) details here: 
+In this exercise, you will create REST Delivery Point, Queue, Topic Subscriptions, REST Consumer etc in SAP Integration Suite, Advanced Event Mesh. 
+
+### 1. Discover SAP Integration Suite, Advanced Event Mesh
+
+Advanced event mesh for SAP Integration Suite is a complete event streaming, event management, and monitoring platform that makes software event brokers available as a service. With advanced event mesh you can create event broker services in minutes, build a model of your event mesh to design and help implement it, and monitor your services and event mesh to ensure everything runs smoothly.
+
+You can find the [SAP Integration Suite, Advanced Event Mesh](https://eu10.console.pubsub.em.services.cloud.sap/login?tenant-id=0e652f06-6ee7-48d1-8877-b84274456b22) details here: 
 
 | Systems | Credentials |
 |---------|-------------|
 | **[SAP Integration Suite, Advanced Event Mesh](https://eu10.console.pubsub.em.services.cloud.sap/login?tenant-id=0e652f06-6ee7-48d1-8877-b84274456b22)** | **Email:** IN263-XXX@education.cloud.sap <br> _replace XXX with the number on your laptop_ |
 
-### 1. Discover SAP Integration Suite, Advanced Event Mesh
-
 ### 2. Get REST Connection details
-1. Open the [SAP Integration Suite, Advanced Event Mesh](https://eu10.console.pubsub.em.services.cloud.sap/login?tenant-id=0e652f06-6ee7-48d1-8877-b84274456b22) application.
+1. Open the [SAP Integration Suite, Advanced Event Mesh](https://eu10.console.pubsub.em.services.cloud.sap/login?tenant-id=0e652f06-6ee7-48d1-8877-b84274456b22) application. and login using above credentials.
 
 2. Navigate to **Cluster Manager** . 
 
@@ -65,6 +69,8 @@ In this exercise, you will create REST Delivery Point, Queue, Topic Subscription
     <!-- ![plot](./images/aem-10.png) -->
 
 10. In the **Create Subscription** screen, type in the topic name as **IN263-XXX/messages** where XXX is the id from your email id and click **Create**
+
+    if your id is 050 then name would be **IN263-050/messages**
 
     <img src="./images/aem-11.png" width="90%" height="90%" />
     <!-- ![plot](./images/aem-11.png)     -->

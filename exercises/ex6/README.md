@@ -6,7 +6,7 @@ In this exercise, your objective is to generate a Device Template and a simulate
 >**Azure IoT Central is a fully managed Internet of Things (IoT) platform provided by Microsoft. It simplifies the process of creating, deploying, and managing IoT solutions. Designed for businesses and organizations, IoT Central allows users to connect, monitor, and control their IoT devices securely and at scale.**     
 >You can find more information about Microsft Azure IoT Central [here](https://azure.microsoft.com/en-in/products/iot-central).
 
-### 2. Setting up Microsoft Azure IoT Central
+### 2. Access Microsoft Azure IoT Central
 
 - We've configured a [Microsoft Azure IoT Central](https://industry-40.azureiotcentral.com/)application within our Azure subscription. You can access the application by logging in with the provided credentials here:
 
