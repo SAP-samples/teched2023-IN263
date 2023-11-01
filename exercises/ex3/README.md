@@ -10,7 +10,7 @@ In this exercise, you will configure SAP Build Process Automation project where 
 |---------|-------------|
 | **[SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/)** | **Email:** IN263-XXX@education.cloud.sap <br> _replace XXX with the number on your laptop_ |
 
-3. We have already created a project for you. In the SAP Build Process Automation Application, Open the **Lobby** Tab , **Search** project using the number assigned to you. Click on the project Events-to-Business-Actions-xxx where xxx is the number.
+2. We have already created a project for you. In the SAP Build Process Automation Application, Open the **Lobby** Tab , **Search** project using the number assigned to you. Click on the project Events-to-Business-Actions-xxx where xxx is the number.
 
     Note that, this number will also be part of your email id as well.
 
