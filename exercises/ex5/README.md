@@ -7,7 +7,7 @@ In this exercise, you will update decision created in **Exercise 3 - Configure D
 1. Open the [SAP Build Process Automation](https://in263-ol7jr9xc.eu10.build.cloud.sap/) Application and Login with credentials provided here: [Systems and Credentials](../ex0//README.md/#4-systems-and-credentials)
 
 
-2. In the SAP Build Process Automation Application, In the **Lobby** Tab , Click on **Events-to-Business-Actions-Framework-XXX** project.
+2. In the SAP Build Process Automation Application, In the **Lobby** Tab , Click on **Events-to-Business-Actions-XXX** project.
 
     <img src="./images/lobby.png" width="90%" height="90%" /> 
     <!-- ![plot](./images/lobby.png) -->
