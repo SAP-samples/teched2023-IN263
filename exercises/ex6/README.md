@@ -1,5 +1,5 @@
 ## Exercise 6 - Set up Device, Rule and Destination in Azure IoT Central    
-In this exeercis, your objective is to generate a Device Template and a simulated Device that produces an event every minute. This exercise also involves setting up a Data Export with filters for your device, and sending these events to the SAP Integration Suite's Advanced Event Mesh for additional processing.
+In this exercise, your objective is to generate a Device Template and a simulated Device that produces an event every minute. This exercise also involves setting up a Data Export with filters for your device, and sending these events to the SAP Integration Suite's Advanced Event Mesh for additional processing.
 
 ### 1. Role of Microsoft Azure IoT Central    
 >
@@ -8,7 +8,7 @@ In this exeercis, your objective is to generate a Device Template and a simulate
 
 ### 2. Setting up Microsoft Azure IoT Central
 
-- We've configured a Microsoft Azure IoT Central application within our Azure subscription. You can access the application by logging in with the provided credentials here: [Systems and Credentials](../ex0/README.md/#4-systems-and-credentials)
+- We've configured a [Microsoft Azure IoT Central](https://industry-40.azureiotcentral.com/)application within our Azure subscription. You can access the application by logging in with the provided credentials here: [Systems and Credentials](../ex0/README.md/#4-systems-and-credentials)
 - If you're interested in setting it up or trying it out within your own Microsoft Azure subscription, you can refer to the instructions provided on this page for detailed steps: [Set Up Microsoft Azure IoT Central](./SetUp_Azure_IoT.md)
 
 ### 3. Create a new Device of template "Waste Container v2"
