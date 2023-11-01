@@ -10,11 +10,12 @@ This repository contains the material for the SAP TechEd 2023 session called **I
 
 This session introduces attendees to a event-driven Industry 4.0 business scenario where they will implement Events-to-Business-Actions framework built on SAP BTP to integrate real time events generated from devices connected to Microsoft Azure IoT Central into SAP Business Processes to enrich the outcome of enterprise operations and facilitate rapid decision making. This Events-to-Business-Actions framework has multiple extension application which can be used in combination with any hyperscaler or telco IoT.
 
-## Business Process Flow
+<!-- ## Business Process Flow
 
 In this event-driven scenario, based on the real-time status of the IoT Devices , actionable events are sent to Events-to-Business-Actions framework built on SAP BTP via SAP Integration Suite Advanced Event Mesh to decide on the critical business actions to be taken in the SAP Enteprise Business systems such as SAP S/4HANA System.
 
-![plot](./exercises/ex0/images/businessprocess.png)
+![plot](./exercises/ex0/images/businessprocess.png) 
+-->
 
 ## Exercises
 
