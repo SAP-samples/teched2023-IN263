@@ -18,13 +18,18 @@ In this event-driven scenario, based on the real-time status of the IoT Devices 
     - (Post Action) After business action is executed, call Microsoft Azure IoT device api to update it's status.   
    Extension application executes the business actions and any pre or post actions.
 
+<img src="./images/SolutionArchitecture.png" width="100%" height="100%" />   
+
+### 2. Hands-On Scenario
+
+
 > In this hand-on session, Based on the fill level of waste container/silo a new Purchase Order Requisition is created in SAP S/4HANA.
 >   -   Simulate a Waste Container device in Microsoft Azure IoT Central which constantly generates events.
 >   -   Set up a rule which identifies when waste container is close to filled and forwards the event to SAP Integration Suite, Advanced Event Mesh uisng detinations in Azure IoT Central.
 >   -   Advanced Event Mesh triggers the webhook to forward the event to Events-to-Business-Actions framework.
 >   -   Events-to-Business-Actions-Framework will first identify that a Purchase Requisition needs to be created in SAP S/4 HANA using Decision from SAP Build Process Automation and then creates a Purchase Requisition in SAP S/4 HANA system. Once purchase requisitionn is created, it also update the Waste Container device status on Azure IoT Central.
 
-### 2. Solution Architecture
+<!-- ### 2. Solution Architecture
 
 <img src="./images/SolutionArchitecture.png" width="90%" height="100%" />     
 
@@ -52,14 +57,14 @@ In case SAP S/4HANA is on-premise and private cloud (refer to Figure-2)– commu
 
 
 - The key services used from Microsoft Azure are the Azure IoT Central, Azure Active Directory.
-- The services used from SAP BTP are the Cloud Foundry Runtime, SAP Advanced Event Mesh, SAP Build Process Automation Decisions capability, SAP Connectivity service, SAP Private Link service, SAP Workflow Management and SAP Destination service. 
+- The services used from SAP BTP are the Cloud Foundry Runtime, SAP Advanced Event Mesh, SAP Build Process Automation Decisions capability, SAP Connectivity service, SAP Private Link service, SAP Workflow Management and SAP Destination service.  -->
 
 ### 3. Pre-Configured Set Up 
 
--  #### For this Hands-On scenario, we have already set up the SAP BTP Subaccount and added the Entitlements and Services required to execute this scenario. 
--  #### In addition, we have set up the SAP Integration Suite, Advanced Event Mesh and configured an Event Broker Service. However, as part of this hands-on, participants will set up Queue, Rest Client and Consumers etc in Advanced Event Mesh. 
--  #### To configure IoT devices, We have also set up a Microsft Azure IoT Central. Waste container device, rule to identify events and destination will be configured by participants as part of this hands-on.
--  ####  We have configured the API_PURCHASEREQ_PROCESS_SRV API in our SAP S/4HANA System to create Purchase Requisitions triggered by events from Azure IoT Central. The service is activated, and a corresponding destination has been established within our SAP BTP subaccount.
+>- For this Hands-On scenario, we have already set up the SAP BTP Subaccount and added the Entitlements and Services required to execute this scenario. 
+>- In addition, we have set up the SAP Integration Suite, Advanced Event Mesh and configured an Event Broker Service. However, as part of this hands-on, participants will set up Queue, Rest Client and Consumers etc in Advanced Event Mesh. 
+>- To configure IoT devices, We have also set up a Microsft Azure IoT Central. Waste container device, rule to identify events and destination will be configured by participants as part of this hands-on.
+>- We have configured the API_PURCHASEREQ_PROCESS_SRV API in our SAP S/4HANA System to create Purchase Requisitions triggered by events from Azure IoT Central. The service is activated, and a corresponding destination has been established within our SAP BTP subaccount.
 
 
 ### 4. **Systems and Credentials**
