@@ -121,9 +121,6 @@ You can find the [SAP Integration Suite, Advanced Event Mesh](https://eu10.conso
 
     **Note:** that the RDP is down - it will automatically start up when a REST consumer makes a connection to the RDP.
 
-    <img src="./images/aem-24.png" width="90%" height="90%" />
-    <!-- ![plot](./images/aem-24.png) -->
-
 8. Create a **REST Consumer** object. Navigate to **REST Consumers** Tab and click on **+ REST Conusmer**
 
     <img src="./images/aem-25.png" width="90%" height="90%" />
