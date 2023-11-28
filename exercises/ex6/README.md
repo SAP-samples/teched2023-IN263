@@ -94,11 +94,11 @@ During this step, you'll initially establish a Destination, outlining the connec
 
     <img src="./images/data-export07.jpg" width="90%" height="90%" />       
 
-    Then select the detination created earlier in step 2 of part 5 and choose **Save**. 
+    Then select the detination created earlier in step 2 of part 4 and choose **Save**. 
     <img src="./images/data-export08.jpg" width="90%" height="90%" />    
 
 
-### 6. Congratulations!
+### 5. Congratulations!
 
 Congratulations on completing your Exercise 6! You have successfully created Device Template, Device and Data export with destination to send event to SAP Inetrgation Suite, Advanced Event Mesh. 
 
